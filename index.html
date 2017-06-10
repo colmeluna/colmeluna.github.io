@@ -209,7 +209,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/install-nvm/">install_nvm</a>
+      <a class="article-title" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a>
     </h1>
   
 
@@ -218,9 +218,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-        <p>NVM</p>
-
+        <h3 id="NVM简介"><a href="#NVM简介" class="headerlink" title="NVM简介"></a>NVM简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
+<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
+<p>注：windows环境使用nvmw。</p>
+<h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
+<pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
+</code></pre><p>2、或者直接克隆到本地通过</p>
+<pre><code>git clone https://github.com/cnpm/nvm.git
+</code></pre>
       
     </div>
     
@@ -237,6 +242,10 @@
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2017/06/10/install-nvm/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -275,7 +284,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Markdown 语法说明<br>
+        <p>Markdown 语法说明<br>&lt;&lt; <a href="http://wowubuntu.com" target="_blank" rel="external">访问 Wow!Ubuntu</a></p>
+<p><strong>NOTE:</strong> This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">Markdown: Syntax</a>.</p>
+<p><strong>声明：</strong> 这份文档派生(fork)于<a href="http://markdown.tw/" target="_blank" rel="external">繁体中文版</a>，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里<a href="http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md" target="_blank" rel="external">查看它的源文件</a>。「繁体中文版的原始文件可以<a href="https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md" target="_blank" rel="external">查看这里</a> 。」–By @<a href="http://twitter.com/riku" target="_blank" rel="external">riku</a></p>
+<p><strong>注：</strong> 本项目托管于 <a href="http://gitcafe.com/riku/Markdown-Syntax-CN/" target="_blank" rel="external">GitCafe</a>上，请通过”派生”和”合并请求”来帮忙改进本项目。<br>
       
     </div>
     
@@ -334,7 +346,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>仙剑奇侠传98柔情版 3DSL 安装测试<br>
+        <p>仙剑奇侠传98柔情版 3DSL 安装测试</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="源码：SDLPAL"><a href="#源码：SDLPAL" class="headerlink" title="源码：SDLPAL"></a>源码：<a href="https://github.com/sdlpal/sdlpal" target="_blank" rel="external">SDLPAL</a></h4><h4 id="下载仙剑游戏："><a href="#下载仙剑游戏：" class="headerlink" title="下载仙剑游戏："></a>下载仙剑游戏：</h4><p>   <a href="http://download.baiyou100.com/Pal98rqp.zip" target="_blank" rel="external">官方游戏ZIP</a><br>   解压缩至TF卡路径： <code>TF:/3ds/sdlpal/</code></p>
+<h4 id="设备："><a href="#设备：" class="headerlink" title="设备："></a>设备：</h4><pre><code>3DS A9HL 一台 
+3ds安装FBI用于安装CIA
+3ds安装Homebrew Lancher。dsp dump解决游戏运行无声音问题。
+3ds安装bootNtr3.5。 3.5内置锁定3ds cpn L2 cache功能。解决游戏运行因降频而卡顿的问题    
+</code></pre>
       
     </div>
     
@@ -395,7 +413,12 @@
       
         <p>oracle11g 非图形化静默安装</p>
 <blockquote>
-<p>“注意安装前检查最新的安装包与当前系统版本兼容性。避免踩坑。 ”<br>
+<p>“注意安装前检查最新的安装包与当前系统版本兼容性。避免踩坑。 ”</p>
+</blockquote>
+<h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><h3 id="安装思路"><a href="#安装思路" class="headerlink" title="安装思路"></a>安装思路</h3><ul>
+<li>通过SSH远程连接云主机，上传oracle11g安装包，在centos6.5上无图形化界面静默安装oracle11g。</li>
+</ul>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3>
       
     </div>
     

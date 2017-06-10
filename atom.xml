@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.colmeluna.me/"/>
-  <updated>2017-06-09T18:02:44.000Z</updated>
+  <updated>2017-06-10T10:39:41.000Z</updated>
   <id>www.colmeluna.me/</id>
   
   <author>
@@ -16,19 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>install_nvm</title>
+    <title>CentOS7 安装nvm</title>
     <link href="www.colmeluna.me/2017/06/10/install-nvm/"/>
     <id>www.colmeluna.me/2017/06/10/install-nvm/</id>
     <published>2017-06-09T16:15:11.000Z</published>
-    <updated>2017-06-09T18:02:44.000Z</updated>
+    <updated>2017-06-10T10:39:41.000Z</updated>
     
-    <content type="html"><![CDATA[<p>NVM</p>
+    <content type="html"><![CDATA[<h3 id="NVM简介"><a href="#NVM简介" class="headerlink" title="NVM简介"></a>NVM简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
+<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
+<p>注：windows环境使用nvmw。</p>
+<h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
+<pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
+</code></pre><p>2、或者直接克隆到本地通过</p>
+<pre><code>git clone https://github.com/cnpm/nvm.git
+</code></pre><a id="more"></a> 
+<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><h4 id="安装nvm非常简单，只要解压后进入目录然后执行。-install-sh然后source-bash-profile。"><a href="#安装nvm非常简单，只要解压后进入目录然后执行。-install-sh然后source-bash-profile。" class="headerlink" title="安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。"></a>安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。</h4><h4 id="也可以手动配置终端启动时自动执行-source-opt-wget-nvm-0-23-0-nvm-sh-在-bashrc-bash-profile-profile-或者-zshrc-文件添加命令"><a href="#也可以手动配置终端启动时自动执行-source-opt-wget-nvm-0-23-0-nvm-sh-在-bashrc-bash-profile-profile-或者-zshrc-文件添加命令" class="headerlink" title="也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:"></a>也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:</h4><p>重新打开你的终端, 输入 <code>nvm -v</code>。</p>
+<h3 id="通过nvm安装管理nodejs"><a href="#通过nvm安装管理nodejs" class="headerlink" title="通过nvm安装管理nodejs"></a>通过nvm安装管理nodejs</h3><h4 id="列出所有可安装的版本nvm-list-remote；"><a href="#列出所有可安装的版本nvm-list-remote；" class="headerlink" title="列出所有可安装的版本nvm list-remote；"></a>列出所有可安装的版本nvm list-remote；</h4><h4 id="安装相应的版本使用nvm-install-v0-12-4；还可以直接安装-iojs-各个版本；"><a href="#安装相应的版本使用nvm-install-v0-12-4；还可以直接安装-iojs-各个版本；" class="headerlink" title="安装相应的版本使用nvm install v0.12.4；还可以直接安装 iojs 各个版本；"></a>安装相应的版本使用nvm install v0.12.4；还可以直接安装 iojs 各个版本；</h4><h4 id="查看一下你当前已经安装的版本-nvm-ls；"><a href="#查看一下你当前已经安装的版本-nvm-ls；" class="headerlink" title="查看一下你当前已经安装的版本:nvm ls；"></a>查看一下你当前已经安装的版本:nvm ls；</h4><h4 id="切换版本；nvm-use-v0-12-4；"><a href="#切换版本；nvm-use-v0-12-4；" class="headerlink" title="切换版本；nvm use v0.12.4；"></a>切换版本；nvm use v0.12.4；</h4><h4 id="设置默认版本-nvm-alias-default-v0-12-4"><a href="#设置默认版本-nvm-alias-default-v0-12-4" class="headerlink" title="设置默认版本 nvm alias default v0.12.4"></a>设置默认版本 nvm alias default v0.12.4</h4><h3 id="加速nvm（使用淘宝镜像）"><a href="#加速nvm（使用淘宝镜像）" class="headerlink" title="加速nvm（使用淘宝镜像）"></a>加速nvm（使用淘宝镜像）</h3><pre><code>NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install v4.5.0`
+</code></pre><h3 id="nvm-command-not-found"><a href="#nvm-command-not-found" class="headerlink" title="nvm command not found"></a>nvm command not found</h3><p>最简单<br>    curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.25.4/" target="_blank" rel="external">https://raw.githubusercontent.com/creationix/nvm/v0.25.4/</a>    install.sh | bash<br>    或者手动加入环境变量将</p>
+<pre><code>##nvm evn setting
+export NVM_DIR=~/.nvm
+[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;
+</code></pre><p>加到 ~/.bash_profile </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;NVM&lt;/p&gt;
-
+      &lt;h3 id=&quot;NVM简介&quot;&gt;&lt;a href=&quot;#NVM简介&quot; class=&quot;headerlink&quot; title=&quot;NVM简介&quot;&gt;&lt;/a&gt;NVM简介&lt;/h3&gt;&lt;p&gt;NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。&lt;/p&gt;
+&lt;p&gt;   &lt;a href=&quot;https://github.com/creationix/nvm.git&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nvm github看这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注：windows环境使用nvmw。&lt;/p&gt;
+&lt;h3 id=&quot;获取nvm源码&quot;&gt;&lt;a href=&quot;#获取nvm源码&quot; class=&quot;headerlink&quot; title=&quot;获取nvm源码&quot;&gt;&lt;/a&gt;获取nvm源码&lt;/h3&gt;&lt;p&gt;1、直接从 github 找到最新版本通过wget下载到本地&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2、或者直接克隆到本地通过&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/cnpm/nvm.git
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -44,12 +64,12 @@
     <link href="www.colmeluna.me/2017/06/08/markdown-details/"/>
     <id>www.colmeluna.me/2017/06/08/markdown-details/</id>
     <published>2017-06-08T13:45:17.000Z</published>
-    <updated>2017-06-09T12:05:45.000Z</updated>
+    <updated>2017-06-10T10:01:46.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Markdown 语法说明<br><a id="more"></a><br>&lt;&lt; <a href="http://wowubuntu.com" target="_blank" rel="external">访问 Wow!Ubuntu</a></p>
+    <content type="html"><![CDATA[<p>Markdown 语法说明<br>&lt;&lt; <a href="http://wowubuntu.com" target="_blank" rel="external">访问 Wow!Ubuntu</a></p>
 <p><strong>NOTE:</strong> This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">Markdown: Syntax</a>.</p>
 <p><strong>声明：</strong> 这份文档派生(fork)于<a href="http://markdown.tw/" target="_blank" rel="external">繁体中文版</a>，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里<a href="http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md" target="_blank" rel="external">查看它的源文件</a>。「繁体中文版的原始文件可以<a href="https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md" target="_blank" rel="external">查看这里</a> 。」–By @<a href="http://twitter.com/riku" target="_blank" rel="external">riku</a></p>
-<p><strong>注：</strong> 本项目托管于 <a href="http://gitcafe.com/riku/Markdown-Syntax-CN/" target="_blank" rel="external">GitCafe</a>上，请通过”派生”和”合并请求”来帮忙改进本项目。</p>
+<p><strong>注：</strong> 本项目托管于 <a href="http://gitcafe.com/riku/Markdown-Syntax-CN/" target="_blank" rel="external">GitCafe</a>上，请通过”派生”和”合并请求”来帮忙改进本项目。<br><a id="more"></a> </p>
 <p>Markdown 语法说明 (简体中文版) / (<a href="./basic.html">点击查看快速入门</a>)</p>
 <h2 id="overview">概述</h2>
 
@@ -529,7 +549,10 @@ _   底线
     
     <summary type="html">
     
-      &lt;p&gt;Markdown 语法说明&lt;br&gt;
+      &lt;p&gt;Markdown 语法说明&lt;br&gt;&amp;lt;&amp;lt; &lt;a href=&quot;http://wowubuntu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;访问 Wow!Ubuntu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown: Syntax&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt; 这份文档派生(fork)于&lt;a href=&quot;http://markdown.tw/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;繁体中文版&lt;/a&gt;，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里&lt;a href=&quot;http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查看它的源文件&lt;/a&gt;。「繁体中文版的原始文件可以&lt;a href=&quot;https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查看这里&lt;/a&gt; 。」–By @&lt;a href=&quot;http://twitter.com/riku&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;riku&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; 本项目托管于 &lt;a href=&quot;http://gitcafe.com/riku/Markdown-Syntax-CN/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitCafe&lt;/a&gt;上，请通过”派生”和”合并请求”来帮忙改进本项目。&lt;br&gt;
     
     </summary>
     
@@ -545,15 +568,16 @@ _   底线
     <link href="www.colmeluna.me/2017/06/07/SDLPAL98/"/>
     <id>www.colmeluna.me/2017/06/07/SDLPAL98/</id>
     <published>2017-06-07T14:42:03.000Z</published>
-    <updated>2017-06-09T12:20:06.000Z</updated>
+    <updated>2017-06-10T10:01:57.000Z</updated>
     
-    <content type="html"><![CDATA[<p>仙剑奇侠传98柔情版 3DSL 安装测试<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>仙剑奇侠传98柔情版 3DSL 安装测试</p>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="源码：SDLPAL"><a href="#源码：SDLPAL" class="headerlink" title="源码：SDLPAL"></a>源码：<a href="https://github.com/sdlpal/sdlpal" target="_blank" rel="external">SDLPAL</a></h4><h4 id="下载仙剑游戏："><a href="#下载仙剑游戏：" class="headerlink" title="下载仙剑游戏："></a>下载仙剑游戏：</h4><p>   <a href="http://download.baiyou100.com/Pal98rqp.zip" target="_blank" rel="external">官方游戏ZIP</a><br>   解压缩至TF卡路径： <code>TF:/3ds/sdlpal/</code></p>
 <h4 id="设备："><a href="#设备：" class="headerlink" title="设备："></a>设备：</h4><pre><code>3DS A9HL 一台 
 3ds安装FBI用于安装CIA
 3ds安装Homebrew Lancher。dsp dump解决游戏运行无声音问题。
 3ds安装bootNtr3.5。 3.5内置锁定3ds cpn L2 cache功能。解决游戏运行因降频而卡顿的问题    
-</code></pre><h4 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源:"></a>相关资源:</h4><p><a href="http://smealum.github.io/3ds/" target="_blank" rel="external">HBL官网</a></p>
+</code></pre><a id="more"></a> 
+<h4 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源:"></a>相关资源:</h4><p><a href="http://smealum.github.io/3ds/" target="_blank" rel="external">HBL官网</a></p>
 <p><a href="https://github.com/Steveice10/FBI.git" target="_blank" rel="external">FBI Github</a></p>
 <p><a href="链接:http://pan.baidu.com/s/1o8BdOvC">相关CIA—提取码—yfts</a></p>
 <h3 id="游戏简介"><a href="#游戏简介" class="headerlink" title="游戏简介"></a>游戏简介</h3><p>XianJian QiXia Zhuan 仙劍奇俠傳 (also known as The Legend of Sword and Fairy and “PAL”) is an action RPG created by Taiwan’s Softstar Entertainment Inc. The game is considered by many as simply one of the best Chinese RPG ever created. Since its first release in 1995 (DOS Version), &gt;many new versions and sequels (including a prequel) were created. However, none could replace the breath-taking and tragic tale it was born from. Here, we meet our protagonist Li Xiaoyao; an aspiring martial artist and the lovely Zhao Ling’er, a charismatic Nuwa descendant.​<br>Now this game has been ported to Nintendo 3DS! In both Chinese and non-official English! This game is also on titledb. Compatible with both o3DS and n3DS.</p>
@@ -570,7 +594,13 @@ _   底线
     
     <summary type="html">
     
-      &lt;p&gt;仙剑奇侠传98柔情版 3DSL 安装测试&lt;br&gt;
+      &lt;p&gt;仙剑奇侠传98柔情版 3DSL 安装测试&lt;/p&gt;
+&lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h3&gt;&lt;h4 id=&quot;源码：SDLPAL&quot;&gt;&lt;a href=&quot;#源码：SDLPAL&quot; class=&quot;headerlink&quot; title=&quot;源码：SDLPAL&quot;&gt;&lt;/a&gt;源码：&lt;a href=&quot;https://github.com/sdlpal/sdlpal&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SDLPAL&lt;/a&gt;&lt;/h4&gt;&lt;h4 id=&quot;下载仙剑游戏：&quot;&gt;&lt;a href=&quot;#下载仙剑游戏：&quot; class=&quot;headerlink&quot; title=&quot;下载仙剑游戏：&quot;&gt;&lt;/a&gt;下载仙剑游戏：&lt;/h4&gt;&lt;p&gt;   &lt;a href=&quot;http://download.baiyou100.com/Pal98rqp.zip&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方游戏ZIP&lt;/a&gt;&lt;br&gt;   解压缩至TF卡路径： &lt;code&gt;TF:/3ds/sdlpal/&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;设备：&quot;&gt;&lt;a href=&quot;#设备：&quot; class=&quot;headerlink&quot; title=&quot;设备：&quot;&gt;&lt;/a&gt;设备：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;3DS A9HL 一台 
+3ds安装FBI用于安装CIA
+3ds安装Homebrew Lancher。dsp dump解决游戏运行无声音问题。
+3ds安装bootNtr3.5。 3.5内置锁定3ds cpn L2 cache功能。解决游戏运行因降频而卡顿的问题    
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -588,16 +618,17 @@ _   底线
     <link href="www.colmeluna.me/2017/06/04/oracle_install_terminal/"/>
     <id>www.colmeluna.me/2017/06/04/oracle_install_terminal/</id>
     <published>2017-06-04T14:42:02.000Z</published>
-    <updated>2017-06-09T12:06:12.000Z</updated>
+    <updated>2017-06-10T10:01:49.000Z</updated>
     
     <content type="html"><![CDATA[<p>oracle11g 非图形化静默安装</p>
 <blockquote>
-<p>“注意安装前检查最新的安装包与当前系统版本兼容性。避免踩坑。 ”<br><a id="more"></a></p>
+<p>“注意安装前检查最新的安装包与当前系统版本兼容性。避免踩坑。 ”</p>
 </blockquote>
 <h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><h3 id="安装思路"><a href="#安装思路" class="headerlink" title="安装思路"></a>安装思路</h3><ul>
 <li>通过SSH远程连接云主机，上传oracle11g安装包，在centos6.5上无图形化界面静默安装oracle11g。</li>
 </ul>
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><a id="more"></a> 
+<ul>
 <li>本地环境windows7+ssh远程连接工具xShell  </li>
 <li>远程云主机CentOS6.5 64位系统  </li>
 <li>安装包文件linux.x64_11gR2_database_1of2.zip、linux.x64_11gR2_database_2of2.zip</li>
@@ -740,7 +771,12 @@ runInstaller 是主要安装脚本
     
       &lt;p&gt;oracle11g 非图形化静默安装&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;“注意安装前检查最新的安装包与当前系统版本兼容性。避免踩坑。 ”&lt;br&gt;
+&lt;p&gt;“注意安装前检查最新的安装包与当前系统版本兼容性。避免踩坑。 ”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前置工作&quot;&gt;&lt;a href=&quot;#前置工作&quot; class=&quot;headerlink&quot; title=&quot;前置工作&quot;&gt;&lt;/a&gt;前置工作&lt;/h2&gt;&lt;h3 id=&quot;安装思路&quot;&gt;&lt;a href=&quot;#安装思路&quot; class=&quot;headerlink&quot; title=&quot;安装思路&quot;&gt;&lt;/a&gt;安装思路&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;通过SSH远程连接云主机，上传oracle11g安装包，在centos6.5上无图形化界面静默安装oracle11g。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h3&gt;
     
     </summary>
     
