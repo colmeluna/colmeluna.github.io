@@ -12,7 +12,7 @@
 <meta property="og:url" content="www.colmeluna.me/2017/06/10/install-nvm/index.html">
 <meta property="og:site_name" content="colmeluna&#39;s Blog">
 <meta property="og:description" content="NVM简介NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。    Nvm github看这里 注：windows环境使用nvmw。 获取nvm源码1、直接从 github 找到最新版本通过wget下载到本地 wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz 2、或者直接克隆到本地通过 git clone h">
-<meta property="og:updated_time" content="2017-06-10T13:42:00.000Z">
+<meta property="og:updated_time" content="2017-06-10T13:43:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 安装nvm">
 <meta name="twitter:description" content="NVM简介NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。    Nvm github看这里 注：windows环境使用nvmw。 获取nvm源码1、直接从 github 找到最新版本通过wget下载到本地 wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz 2、或者直接克隆到本地通过 git clone h">
@@ -237,7 +237,7 @@
                       
             <div id="toc" class="article-toc">
             <h2>目录</h2>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NVM简介"><span class="toc-number">1.</span> <span class="toc-text">NVM简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取nvm源码"><span class="toc-number">2.</span> <span class="toc-text">获取nvm源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装nvm"><span class="toc-number">3.</span> <span class="toc-text">安装nvm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过nvm安装管理nodejs"><span class="toc-number">4.</span> <span class="toc-text">通过nvm安装管理nodejs</span></a></li></ol>  
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NVM简介"><span class="toc-number">1.</span> <span class="toc-text">NVM简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取nvm源码"><span class="toc-number">2.</span> <span class="toc-text">获取nvm源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装nvm"><span class="toc-number">3.</span> <span class="toc-text">安装nvm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过nvm安装管理nodejs"><span class="toc-number">4.</span> <span class="toc-text">通过nvm安装管理nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可能遇到的问题"><span class="toc-number">5.</span> <span class="toc-text">可能遇到的问题</span></a></li></ol>  
             </div>
             <script type="text/javascript">
               var _article = document.getElementsByClassName('article')[0];
@@ -270,7 +270,7 @@
 <pre><code>nvm alias default v6.2.1
 </code></pre><p>加速nvm（使用淘宝镜像）</p>
 <pre><code>NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install v4.5.0`
-</code></pre><p>nvm command not found 的问题<br>手动加入环境变量</p>
+</code></pre><h3 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h3><p>nvm command not found 的问题<br>手动加入环境变量</p>
 <pre><code>vim ~/.bash_profile
 </code></pre><p>将</p>
 <pre><code>##nvm evn setting
