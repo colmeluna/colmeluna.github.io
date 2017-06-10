@@ -12,7 +12,7 @@
 <meta property="og:url" content="www.colmeluna.me/2017/06/10/install-nvm/index.html">
 <meta property="og:site_name" content="colmeluna&#39;s Blog">
 <meta property="og:description" content="NVM简介NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。    Nvm github看这里 注：windows环境使用nvmw。 获取nvm源码1、直接从 github 找到最新版本通过wget下载到本地 wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz 2、或者直接克隆到本地通过 git clone h">
-<meta property="og:updated_time" content="2017-06-10T10:39:41.000Z">
+<meta property="og:updated_time" content="2017-06-10T13:42:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 安装nvm">
 <meta name="twitter:description" content="NVM简介NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。    Nvm github看这里 注：windows环境使用nvmw。 获取nvm源码1、直接从 github 找到最新版本通过wget下载到本地 wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz 2、或者直接克隆到本地通过 git clone h">
@@ -237,7 +237,7 @@
                       
             <div id="toc" class="article-toc">
             <h2>目录</h2>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NVM简介"><span class="toc-number">1.</span> <span class="toc-text">NVM简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取nvm源码"><span class="toc-number">2.</span> <span class="toc-text">获取nvm源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装nvm"><span class="toc-number">3.</span> <span class="toc-text">安装nvm</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装nvm非常简单，只要解压后进入目录然后执行。-install-sh然后source-bash-profile。"><span class="toc-number">3.1.</span> <span class="toc-text">安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#也可以手动配置终端启动时自动执行-source-opt-wget-nvm-0-23-0-nvm-sh-在-bashrc-bash-profile-profile-或者-zshrc-文件添加命令"><span class="toc-number">3.2.</span> <span class="toc-text">也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过nvm安装管理nodejs"><span class="toc-number">4.</span> <span class="toc-text">通过nvm安装管理nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#列出所有可安装的版本nvm-list-remote；"><span class="toc-number">4.1.</span> <span class="toc-text">列出所有可安装的版本nvm list-remote；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装相应的版本使用nvm-install-v0-12-4；还可以直接安装-iojs-各个版本；"><span class="toc-number">4.2.</span> <span class="toc-text">安装相应的版本使用nvm install v0.12.4；还可以直接安装 iojs 各个版本；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看一下你当前已经安装的版本-nvm-ls；"><span class="toc-number">4.3.</span> <span class="toc-text">查看一下你当前已经安装的版本:nvm ls；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#切换版本；nvm-use-v0-12-4；"><span class="toc-number">4.4.</span> <span class="toc-text">切换版本；nvm use v0.12.4；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置默认版本-nvm-alias-default-v0-12-4"><span class="toc-number">4.5.</span> <span class="toc-text">设置默认版本 nvm alias default v0.12.4</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加速nvm（使用淘宝镜像）"><span class="toc-number">5.</span> <span class="toc-text">加速nvm（使用淘宝镜像）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nvm-command-not-found"><span class="toc-number">6.</span> <span class="toc-text">nvm command not found</span></a></li></ol>  
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NVM简介"><span class="toc-number">1.</span> <span class="toc-text">NVM简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取nvm源码"><span class="toc-number">2.</span> <span class="toc-text">获取nvm源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装nvm"><span class="toc-number">3.</span> <span class="toc-text">安装nvm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过nvm安装管理nodejs"><span class="toc-number">4.</span> <span class="toc-text">通过nvm安装管理nodejs</span></a></li></ol>  
             </div>
             <script type="text/javascript">
               var _article = document.getElementsByClassName('article')[0];
@@ -255,13 +255,28 @@
 </code></pre><p>2、或者直接克隆到本地通过</p>
 <pre><code>git clone https://github.com/cnpm/nvm.git
 </code></pre><a id="more"></a> 
-<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><h4 id="安装nvm非常简单，只要解压后进入目录然后执行。-install-sh然后source-bash-profile。"><a href="#安装nvm非常简单，只要解压后进入目录然后执行。-install-sh然后source-bash-profile。" class="headerlink" title="安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。"></a>安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。</h4><h4 id="也可以手动配置终端启动时自动执行-source-opt-wget-nvm-0-23-0-nvm-sh-在-bashrc-bash-profile-profile-或者-zshrc-文件添加命令"><a href="#也可以手动配置终端启动时自动执行-source-opt-wget-nvm-0-23-0-nvm-sh-在-bashrc-bash-profile-profile-或者-zshrc-文件添加命令" class="headerlink" title="也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:"></a>也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:</h4><p>重新打开你的终端, 输入 <code>nvm -v</code>。</p>
-<h3 id="通过nvm安装管理nodejs"><a href="#通过nvm安装管理nodejs" class="headerlink" title="通过nvm安装管理nodejs"></a>通过nvm安装管理nodejs</h3><h4 id="列出所有可安装的版本nvm-list-remote；"><a href="#列出所有可安装的版本nvm-list-remote；" class="headerlink" title="列出所有可安装的版本nvm list-remote；"></a>列出所有可安装的版本nvm list-remote；</h4><h4 id="安装相应的版本使用nvm-install-v0-12-4；还可以直接安装-iojs-各个版本；"><a href="#安装相应的版本使用nvm-install-v0-12-4；还可以直接安装-iojs-各个版本；" class="headerlink" title="安装相应的版本使用nvm install v0.12.4；还可以直接安装 iojs 各个版本；"></a>安装相应的版本使用nvm install v0.12.4；还可以直接安装 iojs 各个版本；</h4><h4 id="查看一下你当前已经安装的版本-nvm-ls；"><a href="#查看一下你当前已经安装的版本-nvm-ls；" class="headerlink" title="查看一下你当前已经安装的版本:nvm ls；"></a>查看一下你当前已经安装的版本:nvm ls；</h4><h4 id="切换版本；nvm-use-v0-12-4；"><a href="#切换版本；nvm-use-v0-12-4；" class="headerlink" title="切换版本；nvm use v0.12.4；"></a>切换版本；nvm use v0.12.4；</h4><h4 id="设置默认版本-nvm-alias-default-v0-12-4"><a href="#设置默认版本-nvm-alias-default-v0-12-4" class="headerlink" title="设置默认版本 nvm alias default v0.12.4"></a>设置默认版本 nvm alias default v0.12.4</h4><h3 id="加速nvm（使用淘宝镜像）"><a href="#加速nvm（使用淘宝镜像）" class="headerlink" title="加速nvm（使用淘宝镜像）"></a>加速nvm（使用淘宝镜像）</h3><pre><code>NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install v4.5.0`
-</code></pre><h3 id="nvm-command-not-found"><a href="#nvm-command-not-found" class="headerlink" title="nvm command not found"></a>nvm command not found</h3><p>最简单<br>    curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.25.4/" target="_blank" rel="external">https://raw.githubusercontent.com/creationix/nvm/v0.25.4/</a>    install.sh | bash<br>    或者手动加入环境变量将</p>
+<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><p>安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。</p>
+<p>也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:</p>
+<p>重新打开你的终端, 输入 <code>nvm -v</code>。</p>
+<h3 id="通过nvm安装管理nodejs"><a href="#通过nvm安装管理nodejs" class="headerlink" title="通过nvm安装管理nodejs"></a>通过nvm安装管理nodejs</h3><p>列出所有可安装的版本</p>
+<pre><code>nvm list-remote
+</code></pre><p>安装相应的版本:例安装v6.2.1</p>
+<pre><code>nvm install v6.2.1
+</code></pre><p>查看一下你当前已经安装的版本:</p>
+<pre><code>nvm ls；
+</code></pre><p>切换版本：</p>
+<pre><code>nvm use v7.5.0；
+</code></pre><p>设置默认版本 </p>
+<pre><code>nvm alias default v6.2.1
+</code></pre><p>加速nvm（使用淘宝镜像）</p>
+<pre><code>NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install v4.5.0`
+</code></pre><p>nvm command not found 的问题<br>手动加入环境变量</p>
+<pre><code>vim ~/.bash_profile
+</code></pre><p>将</p>
 <pre><code>##nvm evn setting
 export NVM_DIR=~/.nvm
 [ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;
-</code></pre><p>加到 ~/.bash_profile </p>
+</code></pre><p>加到 ~/.bash_profile 文件内</p>
 
       
     </div>
