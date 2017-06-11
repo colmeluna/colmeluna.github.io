@@ -4,9 +4,9 @@
   <subtitle>Developer /Gamer /SONY fan</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="colmeluna.me/"/>
+  <link href="www.colmeluna.me/"/>
   <updated>2017-06-10T14:00:39.000Z</updated>
-  <id>colmeluna.me/</id>
+  <id>www.colmeluna.me/</id>
   
   <author>
     <name>colmeluna</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>CentOS7 安装nvm</title>
-    <link href="colmeluna.me/2017/06/10/install-nvm/"/>
-    <id>colmeluna.me/2017/06/10/install-nvm/</id>
+    <link href="www.colmeluna.me/2017/06/10/install-nvm/"/>
+    <id>www.colmeluna.me/2017/06/10/install-nvm/</id>
     <published>2017-06-09T16:15:11.000Z</published>
     <updated>2017-06-10T14:00:39.000Z</updated>
     
@@ -64,17 +64,17 @@
     
     </summary>
     
-      <category term="开发" scheme="colmeluna.me/categories/programming/"/>
+      <category term="开发" scheme="www.colmeluna.me/categories/programming/"/>
     
     
-      <category term="Node.js" scheme="colmeluna.me/tags/Node-js/"/>
+      <category term="Node.js" scheme="www.colmeluna.me/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>markdown语法明细</title>
-    <link href="colmeluna.me/2017/06/08/markdown-details/"/>
-    <id>colmeluna.me/2017/06/08/markdown-details/</id>
+    <link href="www.colmeluna.me/2017/06/08/markdown-details/"/>
+    <id>www.colmeluna.me/2017/06/08/markdown-details/</id>
     <published>2017-06-08T13:45:17.000Z</published>
     <updated>2017-06-10T10:01:46.000Z</updated>
     
@@ -568,17 +568,17 @@ _   底线
     
     </summary>
     
-      <category term="归档" scheme="colmeluna.me/categories/docdetail/"/>
+      <category term="归档" scheme="www.colmeluna.me/categories/docdetail/"/>
     
     
-      <category term="Markdown" scheme="colmeluna.me/tags/Markdown/"/>
+      <category term="Markdown" scheme="www.colmeluna.me/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>SDLPAL98 仙剑奇侠传98柔情版移植3DS</title>
-    <link href="colmeluna.me/2017/06/07/SDLPAL98/"/>
-    <id>colmeluna.me/2017/06/07/SDLPAL98/</id>
+    <link href="www.colmeluna.me/2017/06/07/SDLPAL98/"/>
+    <id>www.colmeluna.me/2017/06/07/SDLPAL98/</id>
     <published>2017-06-07T14:42:03.000Z</published>
     <updated>2017-06-10T10:01:57.000Z</updated>
     
@@ -616,19 +616,19 @@ _   底线
     
     </summary>
     
-      <category term="开发" scheme="colmeluna.me/categories/programming/"/>
+      <category term="开发" scheme="www.colmeluna.me/categories/programming/"/>
     
     
-      <category term="SDL" scheme="colmeluna.me/tags/SDL/"/>
+      <category term="SDL" scheme="www.colmeluna.me/tags/SDL/"/>
     
-      <category term="游戏开发" scheme="colmeluna.me/tags/devGame/"/>
+      <category term="游戏开发" scheme="www.colmeluna.me/tags/devGame/"/>
     
   </entry>
   
   <entry>
     <title>oracle11g 非图形化静默安装</title>
-    <link href="colmeluna.me/2017/06/04/oracle_install_terminal/"/>
-    <id>colmeluna.me/2017/06/04/oracle_install_terminal/</id>
+    <link href="www.colmeluna.me/2017/06/04/oracle_install_terminal/"/>
+    <id>www.colmeluna.me/2017/06/04/oracle_install_terminal/</id>
     <published>2017-06-04T14:42:02.000Z</published>
     <updated>2017-06-10T10:01:49.000Z</updated>
     
@@ -792,10 +792,10 @@ runInstaller 是主要安装脚本
     
     </summary>
     
-      <category term="开发" scheme="colmeluna.me/categories/programming/"/>
+      <category term="开发" scheme="www.colmeluna.me/categories/programming/"/>
     
     
-      <category term="Oracle" scheme="colmeluna.me/tags/Oracle/"/>
+      <category term="Oracle" scheme="www.colmeluna.me/tags/Oracle/"/>
     
   </entry>
   
