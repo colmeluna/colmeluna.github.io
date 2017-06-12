@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="colmeluna.me/"/>
-  <updated>2017-06-10T14:00:39.000Z</updated>
+  <updated>2017-06-12T17:22:40.000Z</updated>
   <id>colmeluna.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="colmeluna.me/2017/06/10/install-nvm/"/>
     <id>colmeluna.me/2017/06/10/install-nvm/</id>
     <published>2017-06-09T16:15:11.000Z</published>
-    <updated>2017-06-10T14:00:39.000Z</updated>
+    <updated>2017-06-12T17:22:40.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="NVM简介"><a href="#NVM简介" class="headerlink" title="NVM简介"></a>NVM简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
 <p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
@@ -30,10 +30,15 @@
 </code></pre><p>2、或者直接克隆到本地通过</p>
 <pre><code>git clone https://github.com/cnpm/nvm.git
 </code></pre><a id="more"></a> 
-<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><p>安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。</p>
-<p>也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:</p>
-<p>重新打开你的终端, 输入 <code>nvm -v</code>。</p>
-<h3 id="通过nvm安装管理nodejs"><a href="#通过nvm安装管理nodejs" class="headerlink" title="通过nvm安装管理nodejs"></a>通过nvm安装管理nodejs</h3><p>列出所有可安装的版本</p>
+<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><p>1、安装nvm非常简单，只要解压后进入目录然后执行安装脚本</p>
+<p><code>./install.sh</code></p>
+<p>2、安装结束后执行</p>
+<p><code>source ~/.bash_profile</code></p>
+<p>使环境变量生效。</p>
+<p>3、重新打开你的终端, 输入</p>
+<p> <code>nvm -v</code>。</p>
+<h3 id="使用nvm"><a href="#使用nvm" class="headerlink" title="使用nvm"></a>使用nvm</h3><p>通过nvm安装管理nodejs基础操作</p>
+<p>列出所有可安装的版本</p>
 <p>   <code>nvm list-remote</code></p>
 <p>安装相应的版本:例安装v6.2.1</p>
 <p>   <code>nvm install v6.2.1</code></p>
@@ -76,32 +81,41 @@
     <link href="colmeluna.me/2017/06/10/nginx_letsencrpty/"/>
     <id>colmeluna.me/2017/06/10/nginx_letsencrpty/</id>
     <published>2017-06-09T16:15:11.000Z</published>
-    <updated>2017-06-11T20:51:34.000Z</updated>
+    <updated>2017-06-12T18:09:24.000Z</updated>
     
-    <content type="html"><![CDATA[<p>certbot certonly –webroot -w /example/html/blog -d example.com -d www.example.com -m example@example.com –agree-tos</p>
-<p>rewrite ^ <a href="https://$server_name$request_uri?" target="_blank" rel="external">https://$server_name$request_uri?</a> permanent;</p>
-<p>server {<br>  listen 443 ssl;<br>  server_name example.com www.example.com;</p>
-<p>  charset utf-8;<br>  root /example/html/blog;<br>  index index.html index.htm;</p>
-<p>  #access_log  /var/log/nginx/demo.mydomain.com_access.log;</p>
-<p>  #error_log  /var/log/nginx/demo.mydomain.com_error.log;</p>
-<h1 id="letsencrypt生成的文件"><a href="#letsencrypt生成的文件" class="headerlink" title="letsencrypt生成的文件"></a>letsencrypt生成的文件</h1><p>  ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;<br>  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;<br>  ssl_session_timeout 1d;<br>  ssl_session_cache shared:SSL:50m;<br>  ssl_session_tickets on;</p>
-<p>  ssl_dhparam /etc/ssl/private/dhparam.pem;</p>
-<p>  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</p>
-<h1 id="一般推荐使用的ssl-ciphers值-https-wiki-mozilla-org-Security-Server-Side-TLS"><a href="#一般推荐使用的ssl-ciphers值-https-wiki-mozilla-org-Security-Server-Side-TLS" class="headerlink" title="一般推荐使用的ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS"></a>一般推荐使用的ssl_ciphers值: <a href="https://wiki.mozilla.org/Security/Server_Side_TLS" target="_blank" rel="external">https://wiki.mozilla.org/Security/Server_Side_TLS</a></h1><p>  ssl_ciphers ‘ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256’;<br>  ssl_prefer_server_ciphers on;<br>}</p>
-<p>firewall-cmd –zone=public –add-port=443/tcp –permanent</p>
+    <content type="html"><![CDATA[<h3 id="关于let’s-encrpty"><a href="#关于let’s-encrpty" class="headerlink" title="关于let’s encrpty"></a>关于let’s encrpty</h3><p>   Let’s encrpty是一个免费的，自动化的，开放的证书颁发机构。于2015年三季度推出的数字证书认证，将通过旨在消除当前手动创建和安装证书的复杂过程的自动化流程，为安全网站提供免费的SSL/TLS证书。<br>     <a href="https://zh.wikipedia.org/wiki/Let%27s_Encrypt" target="_blank" rel="external">Let’s encrypt 维基百科</a><br>     <a href="https://github.com/letsencrypt" target="_blank" rel="external">GitHub代码库</a><br>     <a href="https://letsencrypt.org/getting-started/" target="_blank" rel="external">官方文档Let’s encrypt</a></p>
+<p>官方推荐使用 <a href="https://certbot.eff.org/" target="_blank" rel="external">Certbot</a> 进行证书的颁发安装。所以下一步安装官方工具certbot。</p>
+<h3 id="certbot安装。"><a href="#certbot安装。" class="headerlink" title="certbot安装。"></a>certbot安装。</h3><p>下文以：</p>
+<pre><code>* webroot：example/html/blog 
+* 域名：example.com 
+* 邮箱：example@example.com 
+* / 根路径
+</code></pre><p>为例：</p>
+<h5 id="①创建目录"><a href="#①创建目录" class="headerlink" title="①创建目录"></a>①创建目录</h5><p><code>mkdir letsencrypt</code><br><code>cd letsencrypt</code></p>
+<h5 id="②通过git下载certbot代码库"><a href="#②通过git下载certbot代码库" class="headerlink" title="②通过git下载certbot代码库"></a>②通过git下载certbot代码库</h5><p><code>git clone https://github.com/certbot/certbot.git</code></p>
+<h5 id="③执行安装命令-注意替换example"><a href="#③执行安装命令-注意替换example" class="headerlink" title="③执行安装命令 注意替换example"></a>③执行安装命令 注意替换example</h5><p><code>certbot certonly --webroot -w /example/html/blog -d example.com -d www.example.com -m example@example.com --agree-tos</code></p>
+<font color="#999" size="2" face="黑体">–agree-tos官方说明<br>【The first time you run the command, it will make an account, and ask for an email and agreement to the Let’s Encrypt Subscriber Agreement; you can automate those with –email and –agree-tos】<br></font>
+
+<h5 id="④安装完毕-提示"><a href="#④安装完毕-提示" class="headerlink" title="④安装完毕 提示"></a>④安装完毕 提示</h5><figure class="highlight plain"><figcaption><span>NOTES:</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- Congratulations! Your certificate and chain have been saved at</div><div class="line">  /etc/letsencrypt/live/[xxx.xxx.xxx]/fullchain.pem. Your cert will</div><div class="line">  expire on 2017-03-20. To obtain a new or tweaked version of this</div><div class="line">  certificate in the future, simply run certbot again. To</div><div class="line">  non-interactively renew *all* of your certificates, run &quot;certbot</div><div class="line">  renew&quot;</div><div class="line">- If you like Certbot, please consider supporting our work by:</div><div class="line"> </div><div class="line">  Donating to ISRG / Let&apos;s Encrypt:   https://letsencrypt.org/donate</div><div class="line">  Donating to EFF:                    https://eff.org/donate-le</div></pre></td></tr></table></figure>
+<h5 id="⑤证书位置"><a href="#⑤证书位置" class="headerlink" title="⑤证书位置"></a>⑤证书位置</h5><p><code>/etc/letsencrypt/live/example.com/</code></p>
+<h5 id="⑥生成DHE参数"><a href="#⑥生成DHE参数" class="headerlink" title="⑥生成DHE参数"></a>⑥生成DHE参数</h5><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir <span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span> -p</div><div class="line">cd <span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span></div><div class="line">openssl dhparam <span class="number">2048</span> -out dhparam.pem</div></pre></td></tr></table></figure>
+<font color="#999" size="2" face="黑体"> <a href="https://www.oschina.net/translate/strong_ssl_security_on_nginx" target="_blank" rel="external">关于DHE出处：</a><br>– 所有的nginx版本在往Diffiel-Hellman输入参数时依赖OpenSSL。<br>不幸的时，这就意味着Ephemeral Diffiel-Hellman（DHE）会使用OpenSSL的这一缺陷，包括一个1024位的交换密钥。由于我们正在使用一个2048位的证书，DHE客户端比非ephemeral客户端将使用一个更弱的密钥交换。–<br></font>
+
+
+<h3 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h3><h5 id="nginx-配置文件"><a href="#nginx-配置文件" class="headerlink" title="nginx 配置文件"></a>nginx 配置文件</h5><p>根据nginx安装路径 配置nginx.conf文件 例:<code>/etc/nginx/conf.d/excample.conf</code><br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#http 80</span></div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line"><span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line"><span class="attribute">server_name</span> example.com www.example.com;</div><div class="line">  <span class="comment">#80端口请求重定向https</span></div><div class="line">  <span class="attribute">rewrite</span><span class="regexp"> ^</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>? <span class="literal">permanent</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">#https 443</span></div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">  <span class="attribute">listen</span> <span class="number">443</span> ssl;</div><div class="line">  <span class="attribute">server_name</span> example.com www.example.com;</div><div class="line">  <span class="attribute">charset</span> utf-<span class="number">8</span>;</div><div class="line">  </div><div class="line">  <span class="comment"># ^修改站点根路径^</span></div><div class="line">  <span class="attribute">root</span> /example/html/blog;</div><div class="line">  </div><div class="line">  <span class="attribute">index</span> index.html index.htm;</div><div class="line"></div><div class="line">  <span class="comment"># ^ssl_certificate  ssl_certificate_key填前步骤certbot生成文件路径^</span></div><div class="line">  <span class="comment"># ^fullchain.pem不修改^</span></div><div class="line">  <span class="attribute">ssl_certificate</span> /etc/letsencrypt/live/example.com/fullchain.pem;</div><div class="line">  <span class="attribute">ssl_certificate_key</span> /etc/letsencrypt/live/example.com/privkey.pem;</div><div class="line">  </div><div class="line">  <span class="attribute">ssl_session_timeout</span> <span class="number">1d</span>;</div><div class="line">  <span class="attribute">ssl_session_cache</span> shared:SSL:<span class="number">50m</span>;</div><div class="line">  <span class="attribute">ssl_session_tickets</span> <span class="literal">on</span>;</div><div class="line">  </div><div class="line">  <span class="comment"># ^此处填写前步骤生成的DHE参数路径^</span></div><div class="line">  <span class="attribute">ssl_dhparam</span> /etc/ssl/private/dhparam.pem;</div><div class="line"></div><div class="line">  <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</div><div class="line">  </div><div class="line">  <span class="comment"># ^ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS 网站查询复制粘贴至下方ssl_ciphers^</span></div><div class="line">  <span class="attribute">ssl_ciphers</span> <span class="string">'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256'</span>;</div><div class="line">  </div><div class="line">  <span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="centos7防火墙开启端口"><a href="#centos7防火墙开启端口" class="headerlink" title="centos7防火墙开启端口"></a>centos7防火墙开启端口</h3><p><code>firewall-cmd --zone=public --add-port=443/tcp --permanent</code><br><code>sudo firewall-cmd --reload</code></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;certbot certonly –webroot -w /example/html/blog -d example.com -d www.example.com -m example@example.com –agree-tos&lt;/p&gt;
-&lt;p&gt;rewrite ^ &lt;a h
+      &lt;h3 id=&quot;关于let’s-encrpty&quot;&gt;&lt;a href=&quot;#关于let’s-encrpty&quot; class=&quot;headerlink&quot; title=&quot;关于let’s encrpty&quot;&gt;&lt;/a&gt;关于let’s encrpty&lt;/h3&gt;&lt;p&gt;   Let’s encrpty是一
     
     </summary>
     
       <category term="开发" scheme="colmeluna.me/categories/programming/"/>
     
     
-      <category term="Node.js" scheme="colmeluna.me/tags/Node-js/"/>
+      <category term="Nginx" scheme="colmeluna.me/tags/Nginx/"/>
     
   </entry>
   
