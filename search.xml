@@ -1,295 +1,89 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
-
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="colmeluna" />
-
-
-
-<meta name="description" content="Markdown 语法说明&amp;lt;&amp;lt; 访问 Wow!Ubuntu NOTE: This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to Markdown: Syntax. 声明： 这份文档">
-<meta name="keywords" content="Markdown">
-<meta property="og:type" content="article">
-<meta property="og:title" content="markdown语法明细">
-<meta property="og:url" content="www.colmeluna.me/2017/06/08/markdown-details/index.html">
-<meta property="og:site_name" content="colmeluna&#39;s Blog">
-<meta property="og:description" content="Markdown 语法说明&amp;lt;&amp;lt; 访问 Wow!Ubuntu NOTE: This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to Markdown: Syntax. 声明： 这份文档">
-<meta property="og:updated_time" content="2017-06-10T10:01:46.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown语法明细">
-<meta name="twitter:description" content="Markdown 语法说明&amp;lt;&amp;lt; 访问 Wow!Ubuntu NOTE: This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to Markdown: Syntax. 声明： 这份文档">
-
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="colmeluna&#39;s Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>markdown语法明细 | colmeluna&#39;s Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
-</script>
-
-
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-
-
-
-</head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/colmeluna_avatar.jpg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">colmeluna</a></h1>
-        </hgroup>
-
-        
-        <p class="header-subtitle">Developer /Gamer /SONY fan</p>
-        
-
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
-
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/categories/docdetail/">文档说明</a></li>
-                        
-                            <li><a href="/categories/programming/">技术相关</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/colmeluna" title="GitHub"></a>
-                            
-                                <a class="fa 新浪微博" href="http://weibo.com/colmeluna" title="新浪微博"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/zieg" title="知乎"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SDL/">SDL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devGame/">游戏开发</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-
-                
-                
-                <section class="switch-part switch-part3">
-                
-                    <div id="js-aboutme">Gamer | Java/Node.js Developer |SONY fan</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">colmeluna</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/colmeluna_avatar.jpg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">colmeluna</a></h1>
-            </hgroup>
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[CentOS7 安装nvm]]></title>
+      <url>/2017/06/10/install-nvm/</url>
+      <content type="html"><![CDATA[<h3 id="NVM简介"><a href="#NVM简介" class="headerlink" title="NVM简介"></a>NVM简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
+<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
+<p>注：windows环境使用nvmw。</p>
+<h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
+<pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
+</code></pre><p>2、或者直接克隆到本地通过</p>
+<pre><code>git clone https://github.com/cnpm/nvm.git
+</code></pre><a id="more"></a> 
+<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><p>安装nvm非常简单，只要解压后进入目录然后执行。./install.sh然后source ~/.bash_profile。</p>
+<p>也可以手动配置终端启动时自动执行 source /opt/wget/nvm-0.23.0/nvm.sh,在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加命令:</p>
+<p>重新打开你的终端, 输入 <code>nvm -v</code>。</p>
+<h3 id="通过nvm安装管理nodejs"><a href="#通过nvm安装管理nodejs" class="headerlink" title="通过nvm安装管理nodejs"></a>通过nvm安装管理nodejs</h3><p>列出所有可安装的版本</p>
+<p>   <code>nvm list-remote</code></p>
+<p>安装相应的版本:例安装v6.2.1</p>
+<p>   <code>nvm install v6.2.1</code></p>
+<p>查看一下你当前已经安装的版本:</p>
+<p>   <code>nvm ls</code></p>
+<p>切换版本：</p>
+<p>   <code>nvm use v7.5.0</code></p>
+<p>设置默认版本 </p>
+<p>   <code>nvm alias default v6.2.1</code></p>
+<p>加速nvm（使用淘宝镜像）</p>
+<p>   <code>NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install v4.5.0</code></p>
+<h3 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h3><p>nvm command not found 的问题<br>手动加入环境变量</p>
+<p>   <code>vim ~/.bash_profile</code><br>将</p>
+<figure class="highlight plain"><figcaption><span>nvm evn setting</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export NVM_DIR=~/.nvm</div><div class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</div></pre></td></tr></table></figure>
+<p>加到<code>~/.bash_profile</code> 文件内</p>
+]]></content>
+      
+        <categories>
             
-            <p class="header-subtitle">Developer /Gamer /SONY fan</p>
+            <category> 开发 </category>
             
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/categories/docdetail/">文档说明</a></li>
-                
-                    <li><a href="/categories/programming/">技术相关</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/colmeluna" title="GitHub"></a>
-                            
-                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/colmeluna" title="新浪微博"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zieg" title="知乎"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="other-markdown-details" class="article article-type-other" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/06/08/markdown-details/" class="article-date">
-      <time datetime="2017-06-08T13:45:17.000Z" itemprop="datePublished">2017-06-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+        </categories>
         
-  
-    <h1 class="article-title" itemprop="name">
-      markdown语法明细
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/docdetail/">归档</a>
-    </div>
-
-
+        <tags>
+            
+            <tag> Node.js </tag>
+            
+        </tags>
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
+    </entry>
     
-    <div class="article-entry" itemprop="articleBody">
+    <entry>
+      <title><![CDATA[CentOS7 Nginx Let's Encrpty]]></title>
+      <url>/2017/06/10/nginx_letsencrpty/</url>
+      <content type="html"><![CDATA[<p>certbot certonly –webroot -w /example/html/blog -d example.com -d www.example.com -m example@example.com –agree-tos</p>
+<p>rewrite ^ <a href="https://$server_name$request_uri?" target="_blank" rel="external">https://$server_name$request_uri?</a> permanent;</p>
+<p>server {<br>  listen 443 ssl;<br>  server_name example.com www.example.com;</p>
+<p>  charset utf-8;<br>  root /example/html/blog;<br>  index index.html index.htm;</p>
+<p>  #access_log  /var/log/nginx/demo.mydomain.com_access.log;</p>
+<p>  #error_log  /var/log/nginx/demo.mydomain.com_error.log;</p>
+<h1 id="letsencrypt生成的文件"><a href="#letsencrypt生成的文件" class="headerlink" title="letsencrypt生成的文件"></a>letsencrypt生成的文件</h1><p>  ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;<br>  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;<br>  ssl_session_timeout 1d;<br>  ssl_session_cache shared:SSL:50m;<br>  ssl_session_tickets on;</p>
+<p>  ssl_dhparam /etc/ssl/private/dhparam.pem;</p>
+<p>  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</p>
+<h1 id="一般推荐使用的ssl-ciphers值-https-wiki-mozilla-org-Security-Server-Side-TLS"><a href="#一般推荐使用的ssl-ciphers值-https-wiki-mozilla-org-Security-Server-Side-TLS" class="headerlink" title="一般推荐使用的ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS"></a>一般推荐使用的ssl_ciphers值: <a href="https://wiki.mozilla.org/Security/Server_Side_TLS" target="_blank" rel="external">https://wiki.mozilla.org/Security/Server_Side_TLS</a></h1><p>  ssl_ciphers ‘ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256’;<br>  ssl_prefer_server_ciphers on;<br>}</p>
+<p>firewall-cmd –zone=public –add-port=443/tcp –permanent</p>
+]]></content>
       
-          
-        <p>Markdown 语法说明<br>&lt;&lt; <a href="http://wowubuntu.com" target="_blank" rel="external">访问 Wow!Ubuntu</a></p>
+        <categories>
+            
+            <category> 开发 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Node.js </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[markdown语法明细]]></title>
+      <url>/2017/06/08/markdown-details/</url>
+      <content type="html"><![CDATA[<p>Markdown 语法说明<br>&lt;&lt; <a href="http://wowubuntu.com" target="_blank" rel="external">访问 Wow!Ubuntu</a></p>
 <p><strong>NOTE:</strong> This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">Markdown: Syntax</a>.</p>
 <p><strong>声明：</strong> 这份文档派生(fork)于<a href="http://markdown.tw/" target="_blank" rel="external">繁体中文版</a>，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里<a href="http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md" target="_blank" rel="external">查看它的源文件</a>。「繁体中文版的原始文件可以<a href="https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md" target="_blank" rel="external">查看这里</a> 。」–By @<a href="http://twitter.com/riku" target="_blank" rel="external">riku</a></p>
 <p><strong>注：</strong> 本项目托管于 <a href="http://gitcafe.com/riku/Markdown-Syntax-CN/" target="_blank" rel="external">GitCafe</a>上，请通过”派生”和”合并请求”来帮忙改进本项目。<br><a id="more"></a> </p>
@@ -768,175 +562,230 @@ _   底线
 <li><a href="http://www.sublimetext.com/2" target="_blank" rel="external">Sublime Text 2</a> + <a href="http://ttscoff.github.com/MarkdownEditing/" target="_blank" rel="external">MarkdownEditing</a> / <a href="http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/" target="_blank" rel="external">教程</a></li>
 </ul>
 <p>*** 如有更好的 Markdown 免费编辑器推荐，请到<a href="https://gitcafe.com/riku/Markdown-Syntax-CN/tickets/1" target="_blank" rel="external">这里反馈</a>，谢谢！</p>
-
+]]></content>
       
-    </div>
+        <categories>
+            
+            <category> 归档 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+        
+    </entry>
     
-  </div>
+    <entry>
+      <title><![CDATA[SDLPAL98 仙剑奇侠传98柔情版移植3DS]]></title>
+      <url>/2017/06/07/SDLPAL98/</url>
+      <content type="html"><![CDATA[<p>仙剑奇侠传98柔情版 3DSL 安装测试</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="源码：SDLPAL"><a href="#源码：SDLPAL" class="headerlink" title="源码：SDLPAL"></a>源码：<a href="https://github.com/sdlpal/sdlpal" target="_blank" rel="external">SDLPAL</a></h4><h4 id="下载仙剑游戏："><a href="#下载仙剑游戏：" class="headerlink" title="下载仙剑游戏："></a>下载仙剑游戏：</h4><p>   <a href="http://download.baiyou100.com/Pal98rqp.zip" target="_blank" rel="external">官方游戏ZIP</a><br>   解压缩至TF卡路径： <code>TF:/3ds/sdlpal/</code></p>
+<h4 id="设备："><a href="#设备：" class="headerlink" title="设备："></a>设备：</h4><pre><code>3DS A9HL 一台 
+3ds安装FBI用于安装CIA
+3ds安装Homebrew Lancher。dsp dump解决游戏运行无声音问题。
+3ds安装bootNtr3.5。 3.5内置锁定3ds cpn L2 cache功能。解决游戏运行因降频而卡顿的问题    
+</code></pre><a id="more"></a> 
+<h4 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源:"></a>相关资源:</h4><p><a href="http://smealum.github.io/3ds/" target="_blank" rel="external">HBL官网</a></p>
+<p><a href="https://github.com/Steveice10/FBI.git" target="_blank" rel="external">FBI Github</a></p>
+<p><a href="链接:http://pan.baidu.com/s/1o8BdOvC">相关CIA—提取码—yfts</a></p>
+<h3 id="游戏简介"><a href="#游戏简介" class="headerlink" title="游戏简介"></a>游戏简介</h3><p>XianJian QiXia Zhuan 仙劍奇俠傳 (also known as The Legend of Sword and Fairy and “PAL”) is an action RPG created by Taiwan’s Softstar Entertainment Inc. The game is considered by many as simply one of the best Chinese RPG ever created. Since its first release in 1995 (DOS Version), &gt;many new versions and sequels (including a prequel) were created. However, none could replace the breath-taking and tragic tale it was born from. Here, we meet our protagonist Li Xiaoyao; an aspiring martial artist and the lovely Zhao Ling’er, a charismatic Nuwa descendant.​<br>Now this game has been ported to Nintendo 3DS! In both Chinese and non-official English! This game is also on titledb. Compatible with both o3DS and n3DS.</p>
+<h3 id="解决游戏运行无声音的问题"><a href="#解决游戏运行无声音的问题" class="headerlink" title="解决游戏运行无声音的问题"></a>解决游戏运行无声音的问题</h3><pre><code>下载DspDump.3dsx  、 boot.3dsx  、hblauncher_loader.cia
+
+1.将下载好的DspDump.3dsx放入内存卡根目录的“3ds”文件夹内，boot.3dsx放内存卡根目录，
+    hblauncher_loader.cia放内存卡
+2.利用FBI安装hblanuncher_loader.cia。
+3.打开3ds 联网 ，连接至wifi保证网络通畅
+4.进入hblauncher，找到DspDump后按A进入，提示完成后按Start键
+5.没有声音可继续尝试以上步骤
+</code></pre><h3 id="解决游戏运行卡顿的问题"><a href="#解决游戏运行卡顿的问题" class="headerlink" title="解决游戏运行卡顿的问题"></a>解决游戏运行卡顿的问题</h3><pre><code>安装bootNtr ,打开锁定CPU L2 Cache即可
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> 开发 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> SDL </tag>
+            
+            <tag> 游戏开发 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[oracle11g 非图形化静默安装]]></title>
+      <url>/2017/06/04/oracle_install_terminal/</url>
+      <content type="html"><![CDATA[<p>oracle11g 非图形化静默安装</p>
+<blockquote>
+<p>“注意安装前检查最新的安装包与当前系统版本兼容性。避免踩坑。 ”</p>
+</blockquote>
+<h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><h3 id="安装思路"><a href="#安装思路" class="headerlink" title="安装思路"></a>安装思路</h3><ul>
+<li>通过SSH远程连接云主机，上传oracle11g安装包，在centos6.5上无图形化界面静默安装oracle11g。</li>
+</ul>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><a id="more"></a> 
+<ul>
+<li>本地环境windows7+ssh远程连接工具xShell  </li>
+<li>远程云主机CentOS6.5 64位系统  </li>
+<li>安装包文件linux.x64_11gR2_database_1of2.zip、linux.x64_11gR2_database_2of2.zip</li>
+</ul>
+<h3 id="云主机"><a href="#云主机" class="headerlink" title="云主机"></a>云主机</h3><h4 id="内存："><a href="#内存：" class="headerlink" title="内存："></a>内存：</h4><pre><code>* 最小内存1G，推荐2G或2G以上。1G相对卡机，2G有所改善。
+</code></pre><h4 id="交换空间"><a href="#交换空间" class="headerlink" title="交换空间:"></a>交换空间:</h4><pre><code>* 1GB跟2GB物理内存之间的，设定swap大小为物理内存的1.5倍
+* 2GB跟16GB物理内存之间的，设置swap大小与物理内存相等
+* 16GB物理内存以上的，设置swap大小为16GB
+</code></pre><h4 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘:"></a>硬盘:</h4><pre><code>* 要求空间至少5-6GB
+</code></pre><h2 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h2><h4 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包　　　　　　　"></a>安装依赖包　　　　　　　</h4><p><code>yum -y install binutils compat-libstdc++-33 compat-libstdc++-33.i686 elfutils-libelf elfutils-libelf-devel gcc gcc-c++ 
+    glibc glibc.i686 glibc-common glibc-devel glibc-devel.i686 glibc-headers ksh libaio libaio.i686 libaio-devel libaio-devel.i686 
+    libgcc libgcc.i686 libstdc++ libstdc++.i686 libstdc++-devel make sysstat unixODBC unixODBC-devel</code></p>
+<h4 id="设定swap空间"><a href="#设定swap空间" class="headerlink" title="设定swap空间　"></a>设定swap空间　</h4><p>在/home/下生成swap文件 设定大小2GB</p>
+<pre><code>dd if=/dev/zero of=/home/swapfile bs=1M count=2048
+</code></pre><p>设定使用/home/swapfile交换文件</p>
+<pre><code>mkswap /home/swapfile
+</code></pre><p>启用交换分区</p>
+<pre><code>swapon /home/swapfile
+</code></pre><p>编辑文件/ect/fstab </p>
+<pre><code>vi /etc/fstab
+</code></pre><p>为了引导系统时启用交换文件，文件最下方插入</p>
+<pre><code>/home/swapfile swap swap defaults 0 0
+</code></pre><h4 id="添加oracle用户"><a href="#添加oracle用户" class="headerlink" title="添加oracle用户"></a>添加oracle用户</h4><p> 创建oinstall、dba组 将oracle用户加入组 修改并设定oracle用户密码</p>
+<pre><code>groupadd oinstall
+groupadd dba
+useradd -g oinstall -G dba oracle
+passwd oracle
+</code></pre><h4 id="修改内核参数"><a href="#修改内核参数" class="headerlink" title="修改内核参数"></a>修改内核参数</h4><p> 编辑文件/etc/sysctl.conf　　</p>
+<pre><code>vi /etc/sysctl.conf
+</code></pre><p> 配置文件内加入 修改以下参数。如果没有可以自己添加，如果默认值比参考值大，则不需要修改。</p>
+<pre><code>fs.aio-max-nr = 1048576
+fs.file-max = 6815744
+kernel.shmall = 2097152
+kernel.shmmax = 536870912
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048586
+</code></pre><p> 执行命令sysctl使其自检并生效</p>
+<pre><code>sysctl -p
+</code></pre><h4 id="修改用户资源限制"><a href="#修改用户资源限制" class="headerlink" title="修改用户资源限制"></a>修改用户资源限制</h4><p> 1.修改/etc/security/limits.conf配置文件</p>
+<pre><code>vi /etc/security/limits.conf
+</code></pre><p> 2.配置文件下方加入</p>
+<pre><code>oracle              soft    nproc  2047
+oracle              hard    nproc  16384
+oracle              soft    nofile  1024
+oracle              hard    nofile  65536
+oracle              soft    stack   10240
+</code></pre><p> 3.修改/etc/pam.d/login配置文件</p>
+<pre><code>vi /etc/pam.d/login  
+</code></pre><p> 4.配置文件内加入</p>
+<pre><code>session required /lib/security/pam_limits.so 
+session required pam_limits.so
+</code></pre><h4 id="创建安装目录"><a href="#创建安装目录" class="headerlink" title="创建安装目录"></a>创建安装目录</h4><p> 创建安装目录  /usr/local/oracle     /usr/local/oraInventory     /usr/local/oradata  并赋予组用户及权限</p>
+<pre><code>mkdir -p /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
+chown -R oracle:oinstall /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
+chmod -R 775 /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
+</code></pre><h4 id="创建oraInst-loc文件"><a href="#创建oraInst-loc文件" class="headerlink" title="创建oraInst.loc文件"></a>创建oraInst.loc文件</h4><p> 创建/etc/oraInst.loc文件</p>
+<pre><code>vi /etc/oraInst.loc
+</code></pre><p> 文件内加入以下内容</p>
+<pre><code>inventory_loc=/usr/local/oraInventory
+inst_group=oinstall
+</code></pre><p> 保存退出后执行以下命令。设定该文件的用户组及权限。</p>
+<pre><code>chown oracle:oinstall /etc/oraInst.loc
+chmod 664 /etc/oraInst.loc
+</code></pre><h4 id="上传安装包"><a href="#上传安装包" class="headerlink" title="上传安装包"></a>上传安装包</h4><p> 解压缩命令（没有安装Unzip请自行安装）</p>
+<pre><code>cd /home
+unzip linux.x64_11gR2_database_1of2.zip
+unzip linux.x64_11gR2_database_2of2.zip
+</code></pre><p> 待解压完毕后会生成文件夹/home/database 修改其用户组及权限此处直接使用777</p>
+<pre><code>chmod 777 /home/database
+chown -R oracle.oinstall /home/database
+</code></pre><h4 id="db-install-rsp配置。"><a href="#db-install-rsp配置。" class="headerlink" title="db_install.rsp配置。"></a>db_install.rsp配置。</h4><p> 1、该文件为静默安装的模板文件，安装流程会按照模板配置信息进行相关安装配置。该文件默认存放在解压后的安装包内，也就是本例中/home/database/response下，<br>　　 将oracle静默安装所需应答文件全部拷贝至 /usr/local/oracle文件夹下</p>
+<pre><code>cp /home/database/response/* /usr/local/oracle/
+</code></pre><p> 2、修改安装所需的所有应答文件的所属组及权限</p>
+<pre><code>chown  oracle:oinstall /usr/local/oracle*.rsp
+chmod 755 /usr/local/oracle/*.rsp
+</code></pre><p> 3、配置db_install.rsp文件</p>
+<pre><code>vi /usr/local/oracle/db_install.rsp 
+</code></pre><p> 4、文件内修改相应的参数配置如下：</p>
+<pre><code>oracle.install.option=INSTALL_DB_SWONLY     　　　　　　　　//安装类型,只装数据库软件
+ORACLE_HOSTNAME=db             　　　　　　　　　　　　　　　 //主机名称（命令hostname查询）
+UNIX_GROUP_NAME=oinstall       　　　　　　　　　　　　　　　 // 安装组
+INVENTORY_LOCATION=/usr/local/oraInventory  　　　　　　　　//INVENTORY目录（**不填就是默认值,本例此处需修改,因个人创建安装目录而定）
+SELECTED_LANGUAGES=en,zh_CN            　　　　　　　　 　　// 选择语言
+ORACLE_HOME=/usr/local/oracle/product/11.2.0/db_1  　　　　// oracle_home *路径根据目录情况注意修改 本例安装路径/usr/local/oracle
+ORACLE_BASE=/usr/local/oracle                       　　　 // oracle_base *注意修改
+oracle.install.db.InstallEdition=EE          　　　　　　　 // oracle版本
+oracle.install.db.isCustomInstall=false      　　　　　　　 //自定义安装，否，使用默认组件
+oracle.install.db.DBA_GROUP=dba              　　　　　　　 //dba用户组
+oracle.install.db.OPER_GROUP=oinstall        　　　　　　　 //oper用户组
+oracle.install.db.config.starterdb.type=GENERAL_PURPOSE   //数据库类型
+oracle.install.db.config.starterdb.globalDBName=orcl      //globalDBName
+oracle.install.db.config.starterdb.SID=orcl  　　　　　　　 //SID（**此处注意与环境变量内配置SID一致）
+oracle.install.db.config.starterdb.memoryLimit=81920      //自动管理内存的内存(M)
+oracle.install.db.config.starterdb.password.ALL=oracle    //设定所有数据库用户使用同一个密码
+SECURITY_UPDATES_VIA_MYORACLESUPPORT=false       　　　　　 //（手动写了false）
+DECLINE_SECURITY_UPDATES=true　　　　　　　　　　　　　　　　　// **注意此参数 设定一定要为true
+</code></pre><h4 id="设置oracle用户环境"><a href="#设置oracle用户环境" class="headerlink" title="设置oracle用户环境"></a>设置oracle用户环境</h4><p> 由root切换至创建好的oracle用户</p>
+<pre><code>su - oracle
+</code></pre><p> 修改该用户的用户配置文件</p>
+<pre><code>vi .bash_profile
+</code></pre><p> 文件内加入并修改至以下内容</p>
+<pre><code>export ORACLE_BASE=/usr/local/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/db_1
+export ORACLE_SID=orcl    
+export ORACLE_OWNER=oracle
+export PATH=$PATH:$ORACLE_HOME/bin:$HOME/bin
+</code></pre><p> 保存退出后执行source命令立即生效。</p>
+<pre><code>source .bash_profile
+</code></pre><h4 id="在oracle用户下开始安装。"><a href="#在oracle用户下开始安装。" class="headerlink" title="在oracle用户下开始安装。"></a>在oracle用户下开始安装。</h4><p> 执行命令</p>
+<p>/home/database/./runInstaller -silent -force -ignorePrereq -responseFile /usr/local/oracle/db_install.rsp</p>
+<p> 参数说明  </p>
+<pre><code>/home/database是安装包解压后的路径，此处根据安装包解压所在位置做修改，因人而异。
+runInstaller 是主要安装脚本
+-silent 静默模式
+-force 强制安装
+-ignorePrereq忽略warning直接安装。
+-responseFile读取安装应答文件。
+</code></pre><h4 id="查看安装进度"><a href="#查看安装进度" class="headerlink" title="查看安装进度"></a>查看安装进度</h4><p>xshell另起窗口并以root登陆。通过 </p>
+<pre><code>watch -d -n 2 &apos;du -sh /usr/local/oracle&apos; 
+</code></pre><p>监测oracle安装目录是否变化。或者直接tail -f命令监测安装log日志。</p>
+<h4 id="等待安装"><a href="#等待安装" class="headerlink" title="等待安装"></a>等待安装</h4><p>编译直至出现以下内容，在新创建的root窗口内执行以下提示内的两个脚本，</p>
+<pre><code>/usr/oracle/oraInventory/orainstRoot.sh
+/usr/oracle/product/11.2.0/db_1/root.sh
+</code></pre><h5 id="提示信息"><a href="#提示信息" class="headerlink" title="提示信息"></a>提示信息</h5><hr>
+<p>　　To execute the configuration scripts:</p>
+<p>　　1. Open a terminal window</p>
+<p>　　2. Log in as “root”</p>
+<p>　　3. Run the scripts</p>
+<p>　　4. Return to this window and hit”Enter” key to continue</p>
+<p> 　　Successfully Setup Software.</p>
+<hr>
+<h4 id="安装完毕"><a href="#安装完毕" class="headerlink" title="安装完毕"></a>安装完毕</h4>]]></content>
+      
+        <categories>
+            
+            <category> 开发 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+        
+    </entry>
+    
   
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/06/08/markdown-details/">markdown语法明细</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">colmeluna</a></p>
-        <p><span>发布时间:</span>2017-06-08, 22:45:17</p>
-        <p><span>最后更新:</span>2017-06-10, 18:01:46</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/06/08/markdown-details/" title="markdown语法明细">www.colmeluna.me/2017/06/08/markdown-details/</a>
-            <span class="copy-path" data-clipboard-text="原文: www.colmeluna.me/2017/06/08/markdown-details/　　作者: colmeluna" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/06/10/nginx_letsencrpty/">
-                    CentOS7 Nginx Let&#39;s Encrpty
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/06/07/SDLPAL98/">
-                    SDLPAL98 仙剑奇侠传98柔情版移植3DS
-                </a>
-            </div>
-        
-    </nav>
-
   
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#overview"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#philosophy"><span class="toc-number">1.1.</span> <span class="toc-text">宗旨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html"><span class="toc-number">1.2.</span> <span class="toc-text">兼容 HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#autoescape"><span class="toc-number">1.3.</span> <span class="toc-text">特殊字符自动转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#block"><span class="toc-number">2.</span> <span class="toc-text">区块元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#p"><span class="toc-number">2.1.</span> <span class="toc-text">段落和换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#header"><span class="toc-number">2.2.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#blockquote"><span class="toc-number">2.3.</span> <span class="toc-text">区块引用 Blockquotes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list"><span class="toc-number">2.4.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#precode"><span class="toc-number">2.5.</span> <span class="toc-text">代码区块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hr"><span class="toc-number">2.6.</span> <span class="toc-text">分隔线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#span"><span class="toc-number">3.</span> <span class="toc-text">区段元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#link"><span class="toc-number">3.1.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#em"><span class="toc-number">3.2.</span> <span class="toc-text">强调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code"><span class="toc-number">3.3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#img"><span class="toc-number">3.4.</span> <span class="toc-text">图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#misc"><span class="toc-number">4.</span> <span class="toc-text">其它</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#autolink"><span class="toc-number">4.1.</span> <span class="toc-text">自动链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#backslash"><span class="toc-number">4.2.</span> <span class="toc-text">反斜杠</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#acknowledgement"><span class="toc-number">5.</span> <span class="toc-text">感谢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#editor"><span class="toc-number">6.</span> <span class="toc-text">Markdown 免费编辑器</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-
-
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/06/10/nginx_letsencrpty/" title="上一篇: CentOS7 Nginx Let&#39;s Encrpty">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/06/07/SDLPAL98/" title="下一篇: SDLPAL98 仙剑奇侠传98柔情版移植3DS">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/10/nginx_letsencrpty/">CentOS7 Nginx Let's Encrpty</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/08/markdown-details/">markdown语法明细</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/07/SDLPAL98/">SDLPAL98 仙剑奇侠传98柔情版移植3DS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/04/oracle_install_terminal/">oracle11g 非图形化静默安装</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i>
-                2016-2017 colmeluna
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme
-                <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a>
-            </div>
-        </div>
-        
-    </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
-</body>
-</html>
+</search>

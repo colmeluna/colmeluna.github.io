@@ -27,14 +27,14 @@
 <meta name="twitter:title" content="CentOS7 安装nvm">
 <meta name="twitter:description" content="NVM简介NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。    Nvm github看这里 注：windows环境使用nvmw。 获取nvm源码1、直接从 github 找到最新版本通过wget下载到本地 wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz 2、或者直接克隆到本地通过 git clone h">
 
-<link rel="apple-touch-icon" href= "https://colmeluna.me/apple-touch-icon.png">
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="colmeluna&#39;s Blog" type="application/atom+xml">
 
 
 
-    <link rel="shortcut icon" href="https://colmeluna.me/img/favicon.ico">
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
 
 
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -82,7 +82,7 @@
 
 
 
-    <script> yiliaConfig.rootUrl = https://colmeluna.me; </script>
+    <script> yiliaConfig.rootUrl = "\/";</script>
 
 
 
@@ -97,7 +97,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="https://colmeluna.me/img/colmeluna_avatar.jpg" class="animated zoomIn">
+            <img src="/img/colmeluna_avatar.jpg" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/">colmeluna</a></h1>
@@ -107,6 +107,13 @@
         <p class="header-subtitle">Developer /Gamer /SONY fan</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -151,11 +158,11 @@
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="https://colmeluna.me/">主页</a></li>
+                            <li><a href="/">主页</a></li>
                         
-                            <li><a href="https://colmeluna.me/categories/docdetail/">文档说明</a></li>
+                            <li><a href="/categories/docdetail/">文档说明</a></li>
                         
-                            <li><a href="https://colmeluna.me/categories/programming/">技术相关</a></li>
+                            <li><a href="/categories/programming/">技术相关</a></li>
                         
                         </ul>
                     </nav>
@@ -203,7 +210,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="https://colmeluna.me/img/colmeluna_avatar.jpg" class="animated zoomIn">
+                <img src="/img/colmeluna_avatar.jpg" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">colmeluna</a></h1>
@@ -420,6 +427,22 @@
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
 
