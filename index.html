@@ -250,6 +250,55 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-tiddlywiki_nodejs_nginx_conf" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/13/tiddlywiki_nodejs_nginx_conf/" class="article-date">
+      <time datetime="2017-06-12T18:19:58.000Z" itemprop="datePublished">2017-06-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>tiddlywiki –server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</p>
+<p>location /wiki/ {<br>  proxy_pass <a href="http://127.0.0.1:8080/" target="_blank" rel="external">http://127.0.0.1:8080/</a>;<br>  proxy_set_header        Host             $host;<br>  proxy_set_header        X-Real-IP        $remote_addr;<br>  proxy_set_header        X-Forwarded-For  $proxy_add_x_forwarded_for;<br>}</p>
+<p>location /wiki/ {<br>  proxy_pass <a href="http://127.0.0.1:8080/" target="_blank" rel="external">http://127.0.0.1:8080/</a>;<br>  proxy_set_header        Host             $host;<br>  proxy_set_header        X-Real-IP        $remote_addr;<br>  proxy_set_header        X-Forwarded-For  $proxy_add_x_forwarded_for;<br>}</p>
+<p>location /wiki {<br>        proxy_pass   <a href="http://127.0.0.1:8080" target="_blank" rel="external">http://127.0.0.1:8080</a>;<br>        proxy_set_header        Host             $host;<br>        proxy_set_header        X-Real-IP        $remote_addr;<br>        proxy_set_header        X-Forwarded-For  $proxy_add_x_forwarded_for;<br>    }</p>
+<pre><code>MarkdownPhotos/Res/test.jpg
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-install-nvm" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -279,7 +328,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h3 id="NVM简介"><a href="#NVM简介" class="headerlink" title="NVM简介"></a>NVM简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
+              <h3 id="NVM的简介"><a href="#NVM的简介" class="headerlink" title="NVM的简介"></a>NVM的简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
 <p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
 <p>注：windows环境使用nvmw。</p>
 <h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
