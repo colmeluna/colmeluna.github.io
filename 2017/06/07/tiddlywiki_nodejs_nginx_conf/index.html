@@ -15,15 +15,17 @@
 
 
 
-<meta name="description" content="壹次心">
-<meta property="og:type" content="website">
-<meta property="og:title" content="colmeluna&#39;s Blog">
-<meta property="og:url" content="colmeluna.me/categories/programming/index.html">
+<meta name="description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 Nginx设置反向代理123456location /wiki/ &amp;#123;  proxy_pass http://127.0.0.1:8080/;  proxy_set_header        Host">
+<meta name="keywords" content="Nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tiddlywiki Nginx下的部署">
+<meta property="og:url" content="colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/index.html">
 <meta property="og:site_name" content="colmeluna&#39;s Blog">
-<meta property="og:description" content="壹次心">
+<meta property="og:description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 Nginx设置反向代理123456location /wiki/ &amp;#123;  proxy_pass http://127.0.0.1:8080/;  proxy_set_header        Host">
+<meta property="og:updated_time" content="2017-06-13T11:07:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="colmeluna&#39;s Blog">
-<meta name="twitter:description" content="壹次心">
+<meta name="twitter:title" content="tiddlywiki Nginx下的部署">
+<meta name="twitter:description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 Nginx设置反向代理123456location /wiki/ &amp;#123;  proxy_pass http://127.0.0.1:8080/;  proxy_set_header        Host">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -55,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Category: 开发 | colmeluna&#39;s Blog</title>
+<title>tiddlywiki Nginx下的部署 | colmeluna&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -65,10 +67,10 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
-        isCategory: true,
+        isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
         search: true
@@ -243,208 +245,154 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-tiddlywiki_nodejs_nginx_conf" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/06/10/install-nvm/" class="archive-article-date">
-      <time datetime="2017-06-09T16:15:11.000Z" itemprop="datePublished">06-10</time>
+    <div class="article-meta">
+      <a href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/" class="article-date">
+      <time datetime="2017-06-07T14:42:03.000Z" itemprop="datePublished">2017-06-07</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      tiddlywiki Nginx下的部署
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/programming/">开发</a>
     </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/06/10/nginx_letsencrpty/" class="archive-article-date">
-      <time datetime="2017-06-09T16:15:11.000Z" itemprop="datePublished">06-10</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/10/nginx_letsencrpty/">CentOS7 Nginx Let&#39;s Encrpty</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/programming/">开发</a>
-    </div>
-
-
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>tiddlywiki启动命令</p>
+<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code></p>
+<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span> /wiki/ &#123;</div><div class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</div><div class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>   MarkdownPhotos/Res/test.jpg</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/">tiddlywiki Nginx下的部署</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">colmeluna</a></p>
+        <p><span>发布时间:</span>2017-06-07, 23:42:03</p>
+        <p><span>最后更新:</span>2017-06-13, 19:07:03</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/" title="tiddlywiki Nginx下的部署">colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/</a>
+            <span class="copy-path" data-clipboard-text="原文: colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/　　作者: colmeluna" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/06/07/SDLPAL98/">
+                    SDLPAL98 仙剑奇侠传98柔情版移植3DS
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/06/04/oracle_install_terminal/">
+                    oracle11g 非图形化静默安装
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/06/07/SDLPAL98/" class="archive-article-date">
-      <time datetime="2017-06-07T14:42:03.000Z" itemprop="datePublished">06-07</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/07/SDLPAL98/">SDLPAL98 仙剑奇侠传98柔情版移植3DS</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/programming/">开发</a>
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/06/07/SDLPAL98/" title="上一篇: SDLPAL98 仙剑奇侠传98柔情版移植3DS">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/06/04/oracle_install_terminal/" title="下一篇: oracle11g 非图形化静默安装">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SDL/">SDL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devGame/">游戏开发</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/" class="archive-article-date">
-      <time datetime="2017-06-07T14:42:03.000Z" itemprop="datePublished">06-07</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/10/nginx_letsencrpty/">CentOS7 Nginx Let's Encrpty</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/08/markdown-details/">markdown语法明细</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/07/SDLPAL98/">SDLPAL98 仙剑奇侠传98柔情版移植3DS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/">tiddlywiki Nginx下的部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/04/oracle_install_terminal/">oracle11g 非图形化静默安装</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/">tiddlywiki Nginx下的部署</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/programming/">开发</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/06/04/oracle_install_terminal/" class="archive-article-date">
-      <time datetime="2017-06-04T14:42:02.000Z" itemprop="datePublished">06-04</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/04/oracle_install_terminal/">oracle11g 非图形化静默安装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/programming/">开发</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oracle/">Oracle</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

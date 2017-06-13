@@ -250,55 +250,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-tiddlywiki_nodejs_nginx_conf" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/06/13/tiddlywiki_nodejs_nginx_conf/" class="article-date">
-      <time datetime="2017-06-12T18:19:58.000Z" itemprop="datePublished">2017-06-13</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>tiddlywiki –server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</p>
-<p>location /wiki/ {<br>  proxy_pass <a href="http://127.0.0.1:8080/" target="_blank" rel="external">http://127.0.0.1:8080/</a>;<br>  proxy_set_header        Host             $host;<br>  proxy_set_header        X-Real-IP        $remote_addr;<br>  proxy_set_header        X-Forwarded-For  $proxy_add_x_forwarded_for;<br>}</p>
-<p>location /wiki/ {<br>  proxy_pass <a href="http://127.0.0.1:8080/" target="_blank" rel="external">http://127.0.0.1:8080/</a>;<br>  proxy_set_header        Host             $host;<br>  proxy_set_header        X-Real-IP        $remote_addr;<br>  proxy_set_header        X-Forwarded-For  $proxy_add_x_forwarded_for;<br>}</p>
-<p>location /wiki {<br>        proxy_pass   <a href="http://127.0.0.1:8080" target="_blank" rel="external">http://127.0.0.1:8080</a>;<br>        proxy_set_header        Host             $host;<br>        proxy_set_header        X-Real-IP        $remote_addr;<br>        proxy_set_header        X-Forwarded-For  $proxy_add_x_forwarded_for;<br>    }</p>
-<pre><code>MarkdownPhotos/Res/test.jpg
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-install-nvm" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -586,6 +537,73 @@
         <p class="article-more-link">
           <a href="/2017/06/07/SDLPAL98/#more">阅读全文 >></a>
         </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-tiddlywiki_nodejs_nginx_conf" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/" class="article-date">
+      <time datetime="2017-06-07T14:42:03.000Z" itemprop="datePublished">2017-06-07</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/">tiddlywiki Nginx下的部署</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>tiddlywiki启动命令</p>
+<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code></p>
+<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span> /wiki/ &#123;</div><div class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</div><div class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>   MarkdownPhotos/Res/test.jpg</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/programming/">开发</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
