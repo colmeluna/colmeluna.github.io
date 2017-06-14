@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 Nginx设置反向代理123456location /wiki/ &amp;#123;  proxy_pass http://127.0.0.1:8080/;  proxy_set_header        Host">
+<meta name="description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;amp; Nginx设置反向代理12345">
 <meta name="keywords" content="Nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tiddlywiki Nginx下的部署">
 <meta property="og:url" content="colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/index.html">
 <meta property="og:site_name" content="colmeluna&#39;s Blog">
-<meta property="og:description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 Nginx设置反向代理123456location /wiki/ &amp;#123;  proxy_pass http://127.0.0.1:8080/;  proxy_set_header        Host">
-<meta property="og:updated_time" content="2017-06-13T11:07:03.000Z">
+<meta property="og:description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;amp; Nginx设置反向代理12345">
+<meta property="og:updated_time" content="2017-06-13T19:25:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tiddlywiki Nginx下的部署">
-<meta name="twitter:description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 Nginx设置反向代理123456location /wiki/ &amp;#123;  proxy_pass http://127.0.0.1:8080/;  proxy_set_header        Host">
+<meta name="twitter:description" content="tiddlywiki启动命令 tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;amp; Nginx设置反向代理12345">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -290,9 +290,16 @@
       
           
         <p>tiddlywiki启动命令</p>
-<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code></p>
+<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code><br><code>nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;</code></p>
 <p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span> /wiki/ &#123;</div><div class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</div><div class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>   MarkdownPhotos/Res/test.jpg</p>
+<p>   $:/config/tiddlyweb/host<br>   $protocol$//$host$/wiki/</p>
+<p>   Use the camera to import photos and the new file will replace the old one</p>
+<ol>
+<li>Load Tiddlywiki on the phone  browser</li>
+<li>Use the import tools  and select file with phone camera and take a photo and save.</li>
+</ol>
+<p>Html5 call the  carmera generated file name is “<strong>image.jpg</strong>“ always.<br>so..this problem will made us to only save the last picture in my wiki repo.  </p>
 
       
     </div>
@@ -304,7 +311,7 @@
         <p><span>本文标题:</span><a href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/">tiddlywiki Nginx下的部署</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">colmeluna</a></p>
         <p><span>发布时间:</span>2017-06-07, 23:42:03</p>
-        <p><span>最后更新:</span>2017-06-13, 19:07:03</p>
+        <p><span>最后更新:</span>2017-06-14, 03:25:48</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/06/07/tiddlywiki_nodejs_nginx_conf/" title="tiddlywiki Nginx下的部署">colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/</a>
             <span class="copy-path" data-clipboard-text="原文: colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/　　作者: colmeluna" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
