@@ -107,7 +107,7 @@
         </hgroup>
 
         
-        <p class="header-subtitle">love Game</p>
+        <p class="header-subtitle">devnote</p>
         
 
         
@@ -185,7 +185,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SDL/">SDL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devGame/">游戏开发</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SDL/">SDL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devGame/">游戏开发</a></li></ul>
                     </div>
                 </section>
                 
@@ -219,7 +219,7 @@
               <h1 class="header-author"><a href="/" title="回到主页">colmeluna</a></h1>
             </hgroup>
             
-            <p class="header-subtitle">love Game</p>
+            <p class="header-subtitle">devnote</p>
             
             <nav class="header-menu">
                 <ul>
@@ -250,11 +250,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-install-nvm" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-wxmap-templatemsg" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/06/10/install-nvm/" class="article-date">
-      <time datetime="2017-06-09T16:15:11.000Z" itemprop="datePublished">2017-06-10</time>
+      <a href="/2018/09/15/wxmap-templatemsg/" class="article-date">
+      <time datetime="2018-09-15T02:29:04.000Z" itemprop="datePublished">2018-09-15</time>
 </a>
 
 
@@ -269,7 +269,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a>
+      <a class="article-title" href="/2018/09/15/wxmap-templatemsg/">wxmap-templatemsg</a>
     </h1>
   
 
@@ -279,15 +279,39 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h3 id="NVM的简介"><a href="#NVM的简介" class="headerlink" title="NVM的简介"></a>NVM的简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
-<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
-<p>注：windows环境使用nvmw。</p>
-<h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
-<pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
-</code></pre><p>2、或者直接克隆到本地通过</p>
-<pre><code>git clone https://github.com/cnpm/nvm.git
-</code></pre>
-          
+        <h2 id="小程序模板消息"><a href="#小程序模板消息" class="headerlink" title="小程序模板消息"></a>小程序模板消息</h2><p>###下发条件说明：</p>
+<ol>
+<li>支付<br>当用户在小程序内完成过支付行为，可允许开发者向用户在7天内推送有限条数的模板消息（1次支付可下发3条，多次支付下发条数独立，互相不影响）</li>
+<li>提交表单<br>当用户在小程序内发生过提交表单行为且该表单声明为要发模板消息的，开发者需要向用户提供服务时，可允许开发者向用户在7天内推送有限条数的模板消息（1次提交表单可下发1条，多次提交下发条数独立，相互不影响）</li>
+</ol>
+<p>#####注意事项（前端）：formID：</p>
+<ul>
+<li>支付场景下为prepay_id 。</li>
+<li>非支付场景下为form表单id。非广义id，需开启form表单属性report-submit=’true’，即声明为消息模板发送form表单。</li>
+<li>开发环境formId正确值为 the formId is a mock one 。</li>
+<li>测试消息模板必须使用真机环境，否则formid错误，错误码errer40128 ，Post请求下发失败。<br>注意事项（后端）：</li>
+<li>access_token 2小时限时，超过时限需重新请求accesstoken，否则post下发模板请求错误。</li>
+</ul>
+<p>后台可用模板：    25个/小程序。</p>
+<p>自定义模板：<br>    可以申请添加新模板，审核通过后可使用。 模板审核说明</p>
+<p>实现：</p>
+<p>1、小程序后台新加入一条测试模板：</p>
+<pre><code>选用测试员模板，勾选两项返回值：测试人、备注
+</code></pre><p>2、小程序内新建index.wxml<br>form表单 开启模板推送report-submit=true</p>
+<pre><code>&lt;form bindsubmit=&quot;formSubmit&quot; bindreset=&quot;formReset&quot; report-submit=&apos;true&apos; &gt;
+    &lt;view class=&quot;section&quot;&gt;
+        &lt;view class=&quot;section__title&quot;&gt;手机号&lt;/view&gt;
+        &lt;input name=&quot;testphone&quot; placeholder=&quot;手机号&quot; /&gt;
+    &lt;/view&gt;
+    &lt;view class=&quot;btn-area&quot;&gt;
+        &lt;button formType=&quot;submit&quot;&gt;提交&lt;/button&gt;
+        &lt;button formType=&quot;reset&quot;&gt;重置&lt;/button&gt;
+    &lt;/view&gt;
+&lt;/form&gt;
+</code></pre><p>3、index.js POST请求   参数见文档</p>
+<p>4、开启在线调试</p>
+<p>5、真机 扫码小程序 打开表单提交后获取 服务通知。结束。</p>
+
       
     </div>
     
@@ -301,13 +325,9 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2017/06/10/install-nvm/#more">阅读全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -392,6 +412,81 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
     </div>
 
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-install-nvm" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/10/install-nvm/" class="article-date">
+      <time datetime="2017-06-09T16:15:11.000Z" itemprop="datePublished">2017-06-10</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="NVM的简介"><a href="#NVM的简介" class="headerlink" title="NVM的简介"></a>NVM的简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
+<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
+<p>注：windows环境使用nvmw。</p>
+<h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
+<pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
+</code></pre><p>2、或者直接克隆到本地通过</p>
+<pre><code>git clone https://github.com/cnpm/nvm.git
+</code></pre>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/programming/">开发</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/06/10/install-nvm/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
