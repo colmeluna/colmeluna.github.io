@@ -9,14 +9,16 @@
 <li>支付<br>当用户在小程序内完成过支付行为，可允许开发者向用户在7天内推送有限条数的模板消息（1次支付可下发3条，多次支付下发条数独立，互相不影响）</li>
 <li>提交表单<br>当用户在小程序内发生过提交表单行为且该表单声明为要发模板消息的，开发者需要向用户提供服务时，可允许开发者向用户在7天内推送有限条数的模板消息（1次提交表单可下发1条，多次提交下发条数独立，相互不影响）</li>
 </ol>
-<h5 id="注意事项（前端）：formID："><a href="#注意事项（前端）：formID：" class="headerlink" title="注意事项（前端）：formID："></a>注意事项（前端）：formID：</h5><ul>
+<h3 id="注意事项（前端）：formID："><a href="#注意事项（前端）：formID：" class="headerlink" title="注意事项（前端）：formID："></a>注意事项（前端）：formID：</h3><ul>
 <li>支付场景下为prepay_id 。</li>
 <li>非支付场景下为form表单id。非广义id，需开启form表单属性report-submit=’true’，即声明为消息模板发送form表单。</li>
 <li>开发环境formId正确值为 the formId is a mock one 。</li>
-<li>测试消息模板必须使用真机环境，否则formid错误，错误码errer40128 ，Post请求下发失败。<br>注意事项（后端）：</li>
+<li>测试消息模板必须使用真机环境，否则formid错误，错误码errer40128 ，Post请求下发失败。</li>
+</ul>
+<h2 id="注意事项（后端）："><a href="#注意事项（后端）：" class="headerlink" title="注意事项（后端）："></a>注意事项（后端）：</h2><ul>
 <li>access_token 2小时限时，超过时限需重新请求accesstoken，否则post下发模板请求错误。</li>
 </ul>
-<p>后台可用模板：    25个/小程序。</p>
+<p>后台可用模板: 25个/小程序。</p>
 <p>自定义模板：<br>    可以申请添加新模板，审核通过后可使用。 模板审核说明</p>
 <p>实现：</p>
 <p>1、小程序后台新加入一条测试模板：</p>
@@ -32,7 +34,7 @@
         &lt;button formType=&quot;reset&quot;&gt;重置&lt;/button&gt;
     &lt;/view&gt;
 &lt;/form&gt;
-</code></pre><p>3、index.js POST请求   参数见文档</p>
+</code></pre><p>3、index.js POST请求   </p>
 <p>4、开启在线调试</p>
 <p>5、真机 扫码小程序 打开表单提交后获取 服务通知。结束。</p>
 ]]></content>
@@ -645,6 +647,37 @@ _   底线
     </entry>
     
     <entry>
+      <title><![CDATA[tiddlywiki Nginx下的部署]]></title>
+      <url>/2017/06/07/tiddlywiki_nodejs_nginx_conf/</url>
+      <content type="html"><![CDATA[<p>tiddlywiki启动命令</p>
+<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code><br><code>nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;</code></p>
+<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /wiki/ &#123;</span><br><span class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>   MarkdownPhotos/Res/test.jpg</p>
+<p>   $:/config/tiddlyweb/host<br>   $protocol$//$host$/wiki/</p>
+<p>   Use the camera to import photos and the new file will replace the old one</p>
+<ol>
+<li>Load Tiddlywiki on the phone  browser</li>
+<li>Use the import tools  and select file with phone camera and take a photo and save.</li>
+</ol>
+<p>Html5 call the  carmera generated file name is “<strong>image.jpg</strong>“ always.<br>so..this problem will made us to only save the last picture in my wiki repo.  </p>
+]]></content>
+      
+        <categories>
+            
+            <category> 开发 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[SDLPAL98 仙剑奇侠传98柔情版移植3DS]]></title>
       <url>/2017/06/07/SDLPAL98/</url>
       <content type="html"><![CDATA[<p>仙剑奇侠传98柔情版 3DSL 安装测试</p>
@@ -681,37 +714,6 @@ _   底线
             <tag> SDL </tag>
             
             <tag> 游戏开发 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[tiddlywiki Nginx下的部署]]></title>
-      <url>/2017/06/07/tiddlywiki_nodejs_nginx_conf/</url>
-      <content type="html"><![CDATA[<p>tiddlywiki启动命令</p>
-<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code><br><code>nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;</code></p>
-<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /wiki/ &#123;</span><br><span class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>   MarkdownPhotos/Res/test.jpg</p>
-<p>   $:/config/tiddlyweb/host<br>   $protocol$//$host$/wiki/</p>
-<p>   Use the camera to import photos and the new file will replace the old one</p>
-<ol>
-<li>Load Tiddlywiki on the phone  browser</li>
-<li>Use the import tools  and select file with phone camera and take a photo and save.</li>
-</ol>
-<p>Html5 call the  carmera generated file name is “<strong>image.jpg</strong>“ always.<br>so..this problem will made us to only save the last picture in my wiki repo.  </p>
-]]></content>
-      
-        <categories>
-            
-            <category> 开发 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Nginx </tag>
             
         </tags>
         
