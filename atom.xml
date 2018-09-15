@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="colmeluna.me/"/>
-  <updated>2018-09-15T04:13:56.000Z</updated>
+  <updated>2018-09-15T05:22:22.000Z</updated>
   <id>colmeluna.me/</id>
   
   <author>
@@ -20,15 +20,13 @@
     <link href="colmeluna.me/2018/09/15/wxmap-templatemsg/"/>
     <id>colmeluna.me/2018/09/15/wxmap-templatemsg/</id>
     <published>2018-09-15T02:29:04.000Z</published>
-    <updated>2018-09-15T04:13:56.000Z</updated>
+    <updated>2018-09-15T05:22:22.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="小程序模板消息"><a href="#小程序模板消息" class="headerlink" title="小程序模板消息"></a>小程序模板消息</h2><p>###下发条件说明：</p>
-<ol>
+    <content type="html"><![CDATA[<h2 id="小程序模板消息"><a href="#小程序模板消息" class="headerlink" title="小程序模板消息"></a>小程序模板消息</h2><h3 id="下发条件说明："><a href="#下发条件说明：" class="headerlink" title="下发条件说明："></a>下发条件说明：</h3><ol>
 <li>支付<br>当用户在小程序内完成过支付行为，可允许开发者向用户在7天内推送有限条数的模板消息（1次支付可下发3条，多次支付下发条数独立，互相不影响）</li>
 <li>提交表单<br>当用户在小程序内发生过提交表单行为且该表单声明为要发模板消息的，开发者需要向用户提供服务时，可允许开发者向用户在7天内推送有限条数的模板消息（1次提交表单可下发1条，多次提交下发条数独立，相互不影响）</li>
 </ol>
-<p>#####注意事项（前端）：formID：</p>
-<ul>
+<h5 id="注意事项（前端）：formID："><a href="#注意事项（前端）：formID：" class="headerlink" title="注意事项（前端）：formID："></a>注意事项（前端）：formID：</h5><ul>
 <li>支付场景下为prepay_id 。</li>
 <li>非支付场景下为form表单id。非广义id，需开启form表单属性report-submit=’true’，即声明为消息模板发送form表单。</li>
 <li>开发环境formId正确值为 the formId is a mock one 。</li>
@@ -58,9 +56,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;小程序模板消息&quot;&gt;&lt;a href=&quot;#小程序模板消息&quot; class=&quot;headerlink&quot; title=&quot;小程序模板消息&quot;&gt;&lt;/a&gt;小程序模板消息&lt;/h2&gt;&lt;p&gt;###下发条件说明：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;支付&lt;br&gt;当用户在小程序内完成过支付行为，可允许开
+      &lt;h2 id=&quot;小程序模板消息&quot;&gt;&lt;a href=&quot;#小程序模板消息&quot; class=&quot;headerlink&quot; title=&quot;小程序模板消息&quot;&gt;&lt;/a&gt;小程序模板消息&lt;/h2&gt;&lt;h3 id=&quot;下发条件说明：&quot;&gt;&lt;a href=&quot;#下发条件说明：&quot; class=&quot;headerlink
     
     </summary>
     
@@ -78,8 +74,8 @@
     <published>2017-06-09T16:15:11.000Z</published>
     <updated>2017-06-12T18:09:24.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="关于let’s-encrpty"><a href="#关于let’s-encrpty" class="headerlink" title="关于let’s encrpty"></a>关于let’s encrpty</h3><p>   Let’s encrpty是一个免费的，自动化的，开放的证书颁发机构。于2015年三季度推出的数字证书认证，将通过旨在消除当前手动创建和安装证书的复杂过程的自动化流程，为安全网站提供免费的SSL/TLS证书。<br>     <a href="https://zh.wikipedia.org/wiki/Let%27s_Encrypt" target="_blank" rel="external">Let’s encrypt 维基百科</a><br>     <a href="https://github.com/letsencrypt" target="_blank" rel="external">GitHub代码库</a><br>     <a href="https://letsencrypt.org/getting-started/" target="_blank" rel="external">官方文档Let’s encrypt</a></p>
-<p>官方推荐使用 <a href="https://certbot.eff.org/" target="_blank" rel="external">Certbot</a> 进行证书的颁发安装。所以下一步安装官方工具certbot。</p>
+    <content type="html"><![CDATA[<h3 id="关于let’s-encrpty"><a href="#关于let’s-encrpty" class="headerlink" title="关于let’s encrpty"></a>关于let’s encrpty</h3><p>   Let’s encrpty是一个免费的，自动化的，开放的证书颁发机构。于2015年三季度推出的数字证书认证，将通过旨在消除当前手动创建和安装证书的复杂过程的自动化流程，为安全网站提供免费的SSL/TLS证书。<br>     <a href="https://zh.wikipedia.org/wiki/Let%27s_Encrypt" target="_blank" rel="noopener">Let’s encrypt 维基百科</a><br>     <a href="https://github.com/letsencrypt" target="_blank" rel="noopener">GitHub代码库</a><br>     <a href="https://letsencrypt.org/getting-started/" target="_blank" rel="noopener">官方文档Let’s encrypt</a></p>
+<p>官方推荐使用 <a href="https://certbot.eff.org/" target="_blank" rel="noopener">Certbot</a> 进行证书的颁发安装。所以下一步安装官方工具certbot。</p>
 <h3 id="certbot安装。"><a href="#certbot安装。" class="headerlink" title="certbot安装。"></a>certbot安装。</h3><p>下文以：</p>
 <pre><code>* webroot：example/html/blog 
 * 域名：example.com 
@@ -91,13 +87,13 @@
 <h5 id="③执行安装命令-注意替换example"><a href="#③执行安装命令-注意替换example" class="headerlink" title="③执行安装命令 注意替换example"></a>③执行安装命令 注意替换example</h5><p><code>certbot certonly --webroot -w /example/html/blog -d example.com -d www.example.com -m example@example.com --agree-tos</code></p>
 <font color="#999" size="2" face="黑体">–agree-tos官方说明<br>【The first time you run the command, it will make an account, and ask for an email and agreement to the Let’s Encrypt Subscriber Agreement; you can automate those with –email and –agree-tos】<br></font>
 
-<h5 id="④安装完毕-提示"><a href="#④安装完毕-提示" class="headerlink" title="④安装完毕 提示"></a>④安装完毕 提示</h5><figure class="highlight plain"><figcaption><span>NOTES:</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- Congratulations! Your certificate and chain have been saved at</div><div class="line">  /etc/letsencrypt/live/[xxx.xxx.xxx]/fullchain.pem. Your cert will</div><div class="line">  expire on 2017-03-20. To obtain a new or tweaked version of this</div><div class="line">  certificate in the future, simply run certbot again. To</div><div class="line">  non-interactively renew *all* of your certificates, run &quot;certbot</div><div class="line">  renew&quot;</div><div class="line">- If you like Certbot, please consider supporting our work by:</div><div class="line"> </div><div class="line">  Donating to ISRG / Let&apos;s Encrypt:   https://letsencrypt.org/donate</div><div class="line">  Donating to EFF:                    https://eff.org/donate-le</div></pre></td></tr></table></figure>
+<h5 id="④安装完毕-提示"><a href="#④安装完毕-提示" class="headerlink" title="④安装完毕 提示"></a>④安装完毕 提示</h5><figure class="highlight plain"><figcaption><span>NOTES:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- Congratulations! Your certificate and chain have been saved at</span><br><span class="line">  /etc/letsencrypt/live/[xxx.xxx.xxx]/fullchain.pem. Your cert will</span><br><span class="line">  expire on 2017-03-20. To obtain a new or tweaked version of this</span><br><span class="line">  certificate in the future, simply run certbot again. To</span><br><span class="line">  non-interactively renew *all* of your certificates, run &quot;certbot</span><br><span class="line">  renew&quot;</span><br><span class="line">- If you like Certbot, please consider supporting our work by:</span><br><span class="line"> </span><br><span class="line">  Donating to ISRG / Let&apos;s Encrypt:   https://letsencrypt.org/donate</span><br><span class="line">  Donating to EFF:                    https://eff.org/donate-le</span><br></pre></td></tr></table></figure>
 <h5 id="⑤证书位置"><a href="#⑤证书位置" class="headerlink" title="⑤证书位置"></a>⑤证书位置</h5><p><code>/etc/letsencrypt/live/example.com/</code></p>
-<h5 id="⑥生成DHE参数"><a href="#⑥生成DHE参数" class="headerlink" title="⑥生成DHE参数"></a>⑥生成DHE参数</h5><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir <span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span> -p</div><div class="line">cd <span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span></div><div class="line">openssl dhparam <span class="number">2048</span> -out dhparam.pem</div></pre></td></tr></table></figure>
-<font color="#999" size="2" face="黑体"> <a href="https://www.oschina.net/translate/strong_ssl_security_on_nginx" target="_blank" rel="external">关于DHE出处：</a><br>– 所有的nginx版本在往Diffiel-Hellman输入参数时依赖OpenSSL。<br>不幸的时，这就意味着Ephemeral Diffiel-Hellman（DHE）会使用OpenSSL的这一缺陷，包括一个1024位的交换密钥。由于我们正在使用一个2048位的证书，DHE客户端比非ephemeral客户端将使用一个更弱的密钥交换。–<br></font>
+<h5 id="⑥生成DHE参数"><a href="#⑥生成DHE参数" class="headerlink" title="⑥生成DHE参数"></a>⑥生成DHE参数</h5><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span> -p</span><br><span class="line">cd <span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span></span><br><span class="line">openssl dhparam <span class="number">2048</span> -out dhparam.pem</span><br></pre></td></tr></table></figure>
+<font color="#999" size="2" face="黑体"> <a href="https://www.oschina.net/translate/strong_ssl_security_on_nginx" target="_blank" rel="noopener">关于DHE出处：</a><br>– 所有的nginx版本在往Diffiel-Hellman输入参数时依赖OpenSSL。<br>不幸的时，这就意味着Ephemeral Diffiel-Hellman（DHE）会使用OpenSSL的这一缺陷，包括一个1024位的交换密钥。由于我们正在使用一个2048位的证书，DHE客户端比非ephemeral客户端将使用一个更弱的密钥交换。–<br></font>
 
 
-<h3 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h3><h5 id="nginx-配置文件"><a href="#nginx-配置文件" class="headerlink" title="nginx 配置文件"></a>nginx 配置文件</h5><p>根据nginx安装路径 配置nginx.conf文件 例:<code>/etc/nginx/conf.d/excample.conf</code><br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#http 80</span></div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line"><span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line"><span class="attribute">server_name</span> example.com www.example.com;</div><div class="line">  <span class="comment">#80端口请求重定向https</span></div><div class="line">  <span class="attribute">rewrite</span><span class="regexp"> ^</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>? <span class="literal">permanent</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">#https 443</span></div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">  <span class="attribute">listen</span> <span class="number">443</span> ssl;</div><div class="line">  <span class="attribute">server_name</span> example.com www.example.com;</div><div class="line">  <span class="attribute">charset</span> utf-<span class="number">8</span>;</div><div class="line">  </div><div class="line">  <span class="comment"># ^修改站点根路径^</span></div><div class="line">  <span class="attribute">root</span> /example/html/blog;</div><div class="line">  </div><div class="line">  <span class="attribute">index</span> index.html index.htm;</div><div class="line"></div><div class="line">  <span class="comment"># ^ssl_certificate  ssl_certificate_key填前步骤certbot生成文件路径^</span></div><div class="line">  <span class="comment"># ^fullchain.pem不修改^</span></div><div class="line">  <span class="attribute">ssl_certificate</span> /etc/letsencrypt/live/example.com/fullchain.pem;</div><div class="line">  <span class="attribute">ssl_certificate_key</span> /etc/letsencrypt/live/example.com/privkey.pem;</div><div class="line">  </div><div class="line">  <span class="attribute">ssl_session_timeout</span> <span class="number">1d</span>;</div><div class="line">  <span class="attribute">ssl_session_cache</span> shared:SSL:<span class="number">50m</span>;</div><div class="line">  <span class="attribute">ssl_session_tickets</span> <span class="literal">on</span>;</div><div class="line">  </div><div class="line">  <span class="comment"># ^此处填写前步骤生成的DHE参数路径^</span></div><div class="line">  <span class="attribute">ssl_dhparam</span> /etc/ssl/private/dhparam.pem;</div><div class="line"></div><div class="line">  <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</div><div class="line">  </div><div class="line">  <span class="comment"># ^ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS 网站查询复制粘贴至下方ssl_ciphers^</span></div><div class="line">  <span class="attribute">ssl_ciphers</span> <span class="string">'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256'</span>;</div><div class="line">  </div><div class="line">  <span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h3><h5 id="nginx-配置文件"><a href="#nginx-配置文件" class="headerlink" title="nginx 配置文件"></a>nginx 配置文件</h5><p>根据nginx安装路径 配置nginx.conf文件 例:<code>/etc/nginx/conf.d/excample.conf</code><br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#http 80</span></span><br><span class="line"></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line"><span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line"><span class="attribute">server_name</span> example.com www.example.com;</span><br><span class="line">  <span class="comment">#80端口请求重定向https</span></span><br><span class="line">  <span class="attribute">rewrite</span><span class="regexp"> ^</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>? <span class="literal">permanent</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#https 443</span></span><br><span class="line"></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">  <span class="attribute">listen</span> <span class="number">443</span> ssl;</span><br><span class="line">  <span class="attribute">server_name</span> example.com www.example.com;</span><br><span class="line">  <span class="attribute">charset</span> utf-<span class="number">8</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># ^修改站点根路径^</span></span><br><span class="line">  <span class="attribute">root</span> /example/html/blog;</span><br><span class="line">  </span><br><span class="line">  <span class="attribute">index</span> index.html index.htm;</span><br><span class="line"></span><br><span class="line">  <span class="comment"># ^ssl_certificate  ssl_certificate_key填前步骤certbot生成文件路径^</span></span><br><span class="line">  <span class="comment"># ^fullchain.pem不修改^</span></span><br><span class="line">  <span class="attribute">ssl_certificate</span> /etc/letsencrypt/live/example.com/fullchain.pem;</span><br><span class="line">  <span class="attribute">ssl_certificate_key</span> /etc/letsencrypt/live/example.com/privkey.pem;</span><br><span class="line">  </span><br><span class="line">  <span class="attribute">ssl_session_timeout</span> <span class="number">1d</span>;</span><br><span class="line">  <span class="attribute">ssl_session_cache</span> shared:SSL:<span class="number">50m</span>;</span><br><span class="line">  <span class="attribute">ssl_session_tickets</span> <span class="literal">on</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># ^此处填写前步骤生成的DHE参数路径^</span></span><br><span class="line">  <span class="attribute">ssl_dhparam</span> /etc/ssl/private/dhparam.pem;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># ^ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS 网站查询复制粘贴至下方ssl_ciphers^</span></span><br><span class="line">  <span class="attribute">ssl_ciphers</span> <span class="string">'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256'</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="centos7防火墙开启端口"><a href="#centos7防火墙开启端口" class="headerlink" title="centos7防火墙开启端口"></a>centos7防火墙开启端口</h3><p><code>firewall-cmd --zone=public --add-port=443/tcp --permanent</code><br><code>sudo firewall-cmd --reload</code></p>
 ]]></content>
     
@@ -122,7 +118,7 @@
     <updated>2017-06-13T10:55:11.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="NVM的简介"><a href="#NVM的简介" class="headerlink" title="NVM的简介"></a>NVM的简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
-<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
+<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="noopener">Nvm github看这里</a></p>
 <p>注：windows环境使用nvmw。</p>
 <h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
 <pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
@@ -151,14 +147,14 @@
 <p>   <code>NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install v4.5.0</code></p>
 <h3 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h3><p>nvm command not found 的问题<br>手动加入环境变量</p>
 <p>   <code>vim ~/.bash_profile</code><br>将</p>
-<figure class="highlight plain"><figcaption><span>nvm evn setting</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export NVM_DIR=~/.nvm</div><div class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>nvm evn setting</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=~/.nvm</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</span><br></pre></td></tr></table></figure>
 <p>加到<code>~/.bash_profile</code> 文件内</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;h3 id=&quot;NVM的简介&quot;&gt;&lt;a href=&quot;#NVM的简介&quot; class=&quot;headerlink&quot; title=&quot;NVM的简介&quot;&gt;&lt;/a&gt;NVM的简介&lt;/h3&gt;&lt;p&gt;NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。&lt;/p&gt;
-&lt;p&gt;   &lt;a href=&quot;https://github.com/creationix/nvm.git&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nvm github看这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;   &lt;a href=&quot;https://github.com/creationix/nvm.git&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Nvm github看这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;注：windows环境使用nvmw。&lt;/p&gt;
 &lt;h3 id=&quot;获取nvm源码&quot;&gt;&lt;a href=&quot;#获取nvm源码&quot; class=&quot;headerlink&quot; title=&quot;获取nvm源码&quot;&gt;&lt;/a&gt;获取nvm源码&lt;/h3&gt;&lt;p&gt;1、直接从 github 找到最新版本通过wget下载到本地&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
@@ -182,17 +178,17 @@
     <published>2017-06-08T13:45:17.000Z</published>
     <updated>2017-06-10T10:01:46.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Markdown 语法说明<br>&lt;&lt; <a href="http://wowubuntu.com" target="_blank" rel="external">访问 Wow!Ubuntu</a></p>
-<p><strong>NOTE:</strong> This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">Markdown: Syntax</a>.</p>
-<p><strong>声明：</strong> 这份文档派生(fork)于<a href="http://markdown.tw/" target="_blank" rel="external">繁体中文版</a>，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里<a href="http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md" target="_blank" rel="external">查看它的源文件</a>。「繁体中文版的原始文件可以<a href="https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md" target="_blank" rel="external">查看这里</a> 。」–By @<a href="http://twitter.com/riku" target="_blank" rel="external">riku</a></p>
-<p><strong>注：</strong> 本项目托管于 <a href="http://gitcafe.com/riku/Markdown-Syntax-CN/" target="_blank" rel="external">GitCafe</a>上，请通过”派生”和”合并请求”来帮忙改进本项目。<br><a id="more"></a> </p>
+    <content type="html"><![CDATA[<p>Markdown 语法说明<br>&lt;&lt; <a href="http://wowubuntu.com" target="_blank" rel="noopener">访问 Wow!Ubuntu</a></p>
+<p><strong>NOTE:</strong> This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">Markdown: Syntax</a>.</p>
+<p><strong>声明：</strong> 这份文档派生(fork)于<a href="http://markdown.tw/" target="_blank" rel="noopener">繁体中文版</a>，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里<a href="http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md" target="_blank" rel="noopener">查看它的源文件</a>。「繁体中文版的原始文件可以<a href="https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md" target="_blank" rel="noopener">查看这里</a> 。」–By @<a href="http://twitter.com/riku" target="_blank" rel="noopener">riku</a></p>
+<p><strong>注：</strong> 本项目托管于 <a href="http://gitcafe.com/riku/Markdown-Syntax-CN/" target="_blank" rel="noopener">GitCafe</a>上，请通过”派生”和”合并请求”来帮忙改进本项目。<br><a id="more"></a> </p>
 <p>Markdown 语法说明 (简体中文版) / (<a href="./basic.html">点击查看快速入门</a>)</p>
 <h2 id="overview">概述</h2>
 
 <h3 id="philosophy">宗旨</h3>
 
 <p>Markdown 的目标是实现「易读易写」。</p>
-<p>可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 <a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="external">Setext</a>、<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">atx</a>、<a href="http://textism.com/tools/textile/" target="_blank" rel="external">Textile</a>、<a href="http://docutils.sourceforge.net/rst.html" target="_blank" rel="external">reStructuredText</a>、<a href="http://www.triptico.com/software/grutatxt.html" target="_blank" rel="external">Grutatext</a> 和 <a href="http://ettext.taint.org/doc/" target="_blank" rel="external">EtText</a>，而最大灵感来源其实是纯文本电子邮件的格式。</p>
+<p>可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 <a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="noopener">Setext</a>、<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="noopener">atx</a>、<a href="http://textism.com/tools/textile/" target="_blank" rel="noopener">Textile</a>、<a href="http://docutils.sourceforge.net/rst.html" target="_blank" rel="noopener">reStructuredText</a>、<a href="http://www.triptico.com/software/grutatxt.html" target="_blank" rel="noopener">Grutatext</a> 和 <a href="http://ettext.taint.org/doc/" target="_blank" rel="noopener">EtText</a>，而最大灵感来源其实是纯文本电子邮件的格式。</p>
 <p>总之， Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。</p>
 <h3 id="html">兼容 HTML</h3>
 
@@ -245,7 +241,7 @@
 <p>的确，需要多费点事（多加空格）来产生 <code>&lt;br /&gt;</code> ，但是简单地「每个换行都转换为 <code>&lt;br /&gt;</code>」的方法在 Markdown 中并不适合， Markdown 中 email 式的 <a href="#blockquote">区块引用</a> 和多段落的 <a href="#list">列表</a> 在使用换行来排版的时候，不但更好用，还更方便阅读。</p>
 <h3 id="header">标题</h3>
 
-<p>Markdown 支持两种标题的语法，类 <a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="external">Setext</a> 和类 <a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">atx</a> 形式。</p>
+<p>Markdown 支持两种标题的语法，类 <a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="noopener">Setext</a> 和类 <a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="noopener">atx</a> 形式。</p>
 <p>类 Setext 形式是用底线的形式，利用 <code>=</code> （最高阶标题）和 <code>-</code> （第二阶标题），例如：</p>
 <pre><code>This is an H1
 =============
@@ -629,46 +625,46 @@ _   底线
 !   惊叹号
 </code></pre><h2 id="acknowledgement">感谢</h2>
 
-<p>感谢 <a href="https://twitter.com/#!/leafy7382" target="_blank" rel="external">leafy7382</a> 协助翻译，<a href="http://iamhlb.com/" target="_blank" rel="external">hlb</a>、<a href="http://twitter.com/randylien" target="_blank" rel="external">Randylien</a> 帮忙润稿，<a href="https://twitter.com/#!/ethantw" target="_blank" rel="external">ethantw</a> 的<a href="http://ethantw.net/projects/han/" target="_blank" rel="external">汉字标准格式・CSS Reset</a>， <a href="http://kidwm.net/" target="_blank" rel="external">WM</a> 回报文字错误。</p>
-<p>感谢 <a href="https://github.com/fenprace" target="_blank" rel="external">fenprace</a>，<a href="https://github.com/addv" target="_blank" rel="external">addv</a>。</p>
+<p>感谢 <a href="https://twitter.com/#!/leafy7382" target="_blank" rel="noopener">leafy7382</a> 协助翻译，<a href="http://iamhlb.com/" target="_blank" rel="noopener">hlb</a>、<a href="http://twitter.com/randylien" target="_blank" rel="noopener">Randylien</a> 帮忙润稿，<a href="https://twitter.com/#!/ethantw" target="_blank" rel="noopener">ethantw</a> 的<a href="http://ethantw.net/projects/han/" target="_blank" rel="noopener">汉字标准格式・CSS Reset</a>， <a href="http://kidwm.net/" target="_blank" rel="noopener">WM</a> 回报文字错误。</p>
+<p>感谢 <a href="https://github.com/fenprace" target="_blank" rel="noopener">fenprace</a>，<a href="https://github.com/addv" target="_blank" rel="noopener">addv</a>。</p>
 <hr>
 <h2 id="editor">Markdown 免费编辑器</h2>
 
 <p>Windows 平台</p>
 <ul>
-<li><a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad</a></li>
-<li><a href="http://code52.org/DownmarkerWPF/" target="_blank" rel="external">MarkPad</a></li>
+<li><a href="http://markdownpad.com/" target="_blank" rel="noopener">MarkdownPad</a></li>
+<li><a href="http://code52.org/DownmarkerWPF/" target="_blank" rel="noopener">MarkPad</a></li>
 </ul>
 <p>Linux 平台</p>
 <ul>
-<li><a href="http://sourceforge.net/p/retext/home/ReText/" target="_blank" rel="external">ReText</a></li>
+<li><a href="http://sourceforge.net/p/retext/home/ReText/" target="_blank" rel="noopener">ReText</a></li>
 </ul>
 <p>Mac 平台</p>
 <ul>
-<li><a href="http://mouapp.com/" target="_blank" rel="external">Mou</a></li>
+<li><a href="http://mouapp.com/" target="_blank" rel="noopener">Mou</a></li>
 </ul>
 <p>在线编辑器</p>
 <ul>
-<li><a href="http://markable.in/" target="_blank" rel="external">Markable.in</a></li>
-<li><a href="http://dillinger.io/" target="_blank" rel="external">Dillinger.io</a></li>
+<li><a href="http://markable.in/" target="_blank" rel="noopener">Markable.in</a></li>
+<li><a href="http://dillinger.io/" target="_blank" rel="noopener">Dillinger.io</a></li>
 </ul>
 <p>浏览器插件</p>
 <ul>
-<li><a href="https://chrome.google.com/webstore/detail/oknndfeeopgpibecfjljjfanledpbkog" target="_blank" rel="external">MaDe</a> (Chrome)</li>
+<li><a href="https://chrome.google.com/webstore/detail/oknndfeeopgpibecfjljjfanledpbkog" target="_blank" rel="noopener">MaDe</a> (Chrome)</li>
 </ul>
 <p>高级应用</p>
 <ul>
-<li><a href="http://www.sublimetext.com/2" target="_blank" rel="external">Sublime Text 2</a> + <a href="http://ttscoff.github.com/MarkdownEditing/" target="_blank" rel="external">MarkdownEditing</a> / <a href="http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/" target="_blank" rel="external">教程</a></li>
+<li><a href="http://www.sublimetext.com/2" target="_blank" rel="noopener">Sublime Text 2</a> + <a href="http://ttscoff.github.com/MarkdownEditing/" target="_blank" rel="noopener">MarkdownEditing</a> / <a href="http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/" target="_blank" rel="noopener">教程</a></li>
 </ul>
-<p>*** 如有更好的 Markdown 免费编辑器推荐，请到<a href="https://gitcafe.com/riku/Markdown-Syntax-CN/tickets/1" target="_blank" rel="external">这里反馈</a>，谢谢！</p>
+<p>*** 如有更好的 Markdown 免费编辑器推荐，请到<a href="https://gitcafe.com/riku/Markdown-Syntax-CN/tickets/1" target="_blank" rel="noopener">这里反馈</a>，谢谢！</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Markdown 语法说明&lt;br&gt;&amp;lt;&amp;lt; &lt;a href=&quot;http://wowubuntu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;访问 Wow!Ubuntu&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown: Syntax&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt; 这份文档派生(fork)于&lt;a href=&quot;http://markdown.tw/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;繁体中文版&lt;/a&gt;，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里&lt;a href=&quot;http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查看它的源文件&lt;/a&gt;。「繁体中文版的原始文件可以&lt;a href=&quot;https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查看这里&lt;/a&gt; 。」–By @&lt;a href=&quot;http://twitter.com/riku&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;riku&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; 本项目托管于 &lt;a href=&quot;http://gitcafe.com/riku/Markdown-Syntax-CN/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitCafe&lt;/a&gt;上，请通过”派生”和”合并请求”来帮忙改进本项目。&lt;br&gt;
+      &lt;p&gt;Markdown 语法说明&lt;br&gt;&amp;lt;&amp;lt; &lt;a href=&quot;http://wowubuntu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;访问 Wow!Ubuntu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Markdown: Syntax&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt; 这份文档派生(fork)于&lt;a href=&quot;http://markdown.tw/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;繁体中文版&lt;/a&gt;，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里&lt;a href=&quot;http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;查看它的源文件&lt;/a&gt;。「繁体中文版的原始文件可以&lt;a href=&quot;https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;查看这里&lt;/a&gt; 。」–By @&lt;a href=&quot;http://twitter.com/riku&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;riku&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; 本项目托管于 &lt;a href=&quot;http://gitcafe.com/riku/Markdown-Syntax-CN/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitCafe&lt;/a&gt;上，请通过”派生”和”合并请求”来帮忙改进本项目。&lt;br&gt;
     
     </summary>
     
@@ -687,14 +683,14 @@ _   底线
     <updated>2017-06-10T10:01:57.000Z</updated>
     
     <content type="html"><![CDATA[<p>仙剑奇侠传98柔情版 3DSL 安装测试</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="源码：SDLPAL"><a href="#源码：SDLPAL" class="headerlink" title="源码：SDLPAL"></a>源码：<a href="https://github.com/sdlpal/sdlpal" target="_blank" rel="external">SDLPAL</a></h4><h4 id="下载仙剑游戏："><a href="#下载仙剑游戏：" class="headerlink" title="下载仙剑游戏："></a>下载仙剑游戏：</h4><p>   <a href="http://download.baiyou100.com/Pal98rqp.zip" target="_blank" rel="external">官方游戏ZIP</a><br>   解压缩至TF卡路径： <code>TF:/3ds/sdlpal/</code></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="源码：SDLPAL"><a href="#源码：SDLPAL" class="headerlink" title="源码：SDLPAL"></a>源码：<a href="https://github.com/sdlpal/sdlpal" target="_blank" rel="noopener">SDLPAL</a></h4><h4 id="下载仙剑游戏："><a href="#下载仙剑游戏：" class="headerlink" title="下载仙剑游戏："></a>下载仙剑游戏：</h4><p>   <a href="http://download.baiyou100.com/Pal98rqp.zip" target="_blank" rel="noopener">官方游戏ZIP</a><br>   解压缩至TF卡路径： <code>TF:/3ds/sdlpal/</code></p>
 <h4 id="设备："><a href="#设备：" class="headerlink" title="设备："></a>设备：</h4><pre><code>3DS A9HL 一台 
 3ds安装FBI用于安装CIA
 3ds安装Homebrew Lancher。dsp dump解决游戏运行无声音问题。
 3ds安装bootNtr3.5。 3.5内置锁定3ds cpn L2 cache功能。解决游戏运行因降频而卡顿的问题    
 </code></pre><a id="more"></a> 
-<h4 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源:"></a>相关资源:</h4><p><a href="http://smealum.github.io/3ds/" target="_blank" rel="external">HBL官网</a></p>
-<p><a href="https://github.com/Steveice10/FBI.git" target="_blank" rel="external">FBI Github</a></p>
+<h4 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源:"></a>相关资源:</h4><p><a href="http://smealum.github.io/3ds/" target="_blank" rel="noopener">HBL官网</a></p>
+<p><a href="https://github.com/Steveice10/FBI.git" target="_blank" rel="noopener">FBI Github</a></p>
 <p><a href="链接:http://pan.baidu.com/s/1o8BdOvC">相关CIA—提取码—yfts</a></p>
 <h3 id="游戏简介"><a href="#游戏简介" class="headerlink" title="游戏简介"></a>游戏简介</h3><p>XianJian QiXia Zhuan 仙劍奇俠傳 (also known as The Legend of Sword and Fairy and “PAL”) is an action RPG created by Taiwan’s Softstar Entertainment Inc. The game is considered by many as simply one of the best Chinese RPG ever created. Since its first release in 1995 (DOS Version), &gt;many new versions and sequels (including a prequel) were created. However, none could replace the breath-taking and tragic tale it was born from. Here, we meet our protagonist Li Xiaoyao; an aspiring martial artist and the lovely Zhao Ling’er, a charismatic Nuwa descendant.​<br>Now this game has been ported to Nintendo 3DS! In both Chinese and non-official English! This game is also on titledb. Compatible with both o3DS and n3DS.</p>
 <h3 id="解决游戏运行无声音的问题"><a href="#解决游戏运行无声音的问题" class="headerlink" title="解决游戏运行无声音的问题"></a>解决游戏运行无声音的问题</h3><pre><code>下载DspDump.3dsx  、 boot.3dsx  、hblauncher_loader.cia
@@ -711,7 +707,7 @@ _   底线
     <summary type="html">
     
       &lt;p&gt;仙剑奇侠传98柔情版 3DSL 安装测试&lt;/p&gt;
-&lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h3&gt;&lt;h4 id=&quot;源码：SDLPAL&quot;&gt;&lt;a href=&quot;#源码：SDLPAL&quot; class=&quot;headerlink&quot; title=&quot;源码：SDLPAL&quot;&gt;&lt;/a&gt;源码：&lt;a href=&quot;https://github.com/sdlpal/sdlpal&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SDLPAL&lt;/a&gt;&lt;/h4&gt;&lt;h4 id=&quot;下载仙剑游戏：&quot;&gt;&lt;a href=&quot;#下载仙剑游戏：&quot; class=&quot;headerlink&quot; title=&quot;下载仙剑游戏：&quot;&gt;&lt;/a&gt;下载仙剑游戏：&lt;/h4&gt;&lt;p&gt;   &lt;a href=&quot;http://download.baiyou100.com/Pal98rqp.zip&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方游戏ZIP&lt;/a&gt;&lt;br&gt;   解压缩至TF卡路径： &lt;code&gt;TF:/3ds/sdlpal/&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h3&gt;&lt;h4 id=&quot;源码：SDLPAL&quot;&gt;&lt;a href=&quot;#源码：SDLPAL&quot; class=&quot;headerlink&quot; title=&quot;源码：SDLPAL&quot;&gt;&lt;/a&gt;源码：&lt;a href=&quot;https://github.com/sdlpal/sdlpal&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SDLPAL&lt;/a&gt;&lt;/h4&gt;&lt;h4 id=&quot;下载仙剑游戏：&quot;&gt;&lt;a href=&quot;#下载仙剑游戏：&quot; class=&quot;headerlink&quot; title=&quot;下载仙剑游戏：&quot;&gt;&lt;/a&gt;下载仙剑游戏：&lt;/h4&gt;&lt;p&gt;   &lt;a href=&quot;http://download.baiyou100.com/Pal98rqp.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官方游戏ZIP&lt;/a&gt;&lt;br&gt;   解压缩至TF卡路径： &lt;code&gt;TF:/3ds/sdlpal/&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id=&quot;设备：&quot;&gt;&lt;a href=&quot;#设备：&quot; class=&quot;headerlink&quot; title=&quot;设备：&quot;&gt;&lt;/a&gt;设备：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;3DS A9HL 一台 
 3ds安装FBI用于安装CIA
 3ds安装Homebrew Lancher。dsp dump解决游戏运行无声音问题。
@@ -738,7 +734,7 @@ _   底线
     
     <content type="html"><![CDATA[<p>tiddlywiki启动命令</p>
 <p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code><br><code>nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;</code></p>
-<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span> /wiki/ &#123;</div><div class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</div><div class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</div><div class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /wiki/ &#123;</span><br><span class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>   MarkdownPhotos/Res/test.jpg</p>
 <p>   $:/config/tiddlyweb/host<br>   $protocol$//$host$/wiki/</p>
 <p>   Use the camera to import photos and the new file will replace the old one</p>

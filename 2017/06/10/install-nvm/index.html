@@ -22,6 +22,7 @@
 <meta property="og:url" content="colmeluna.me/2017/06/10/install-nvm/index.html">
 <meta property="og:site_name" content="Colmeluna&#39;s Blog">
 <meta property="og:description" content="NVM的简介NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。    Nvm github看这里 注：windows环境使用nvmw。 获取nvm源码1、直接从 github 找到最新版本通过wget下载到本地 wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz 2、或者直接克隆到本地通过 git clone">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-06-13T10:55:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 安装nvm">
@@ -290,7 +291,7 @@
       
           
         <h3 id="NVM的简介"><a href="#NVM的简介" class="headerlink" title="NVM的简介"></a>NVM的简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
-<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="external">Nvm github看这里</a></p>
+<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="noopener">Nvm github看这里</a></p>
 <p>注：windows环境使用nvmw。</p>
 <h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
 <pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
@@ -319,7 +320,7 @@
 <p>   <code>NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install v4.5.0</code></p>
 <h3 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h3><p>nvm command not found 的问题<br>手动加入环境变量</p>
 <p>   <code>vim ~/.bash_profile</code><br>将</p>
-<figure class="highlight plain"><figcaption><span>nvm evn setting</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export NVM_DIR=~/.nvm</div><div class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>nvm evn setting</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=~/.nvm</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</span><br></pre></td></tr></table></figure>
 <p>加到<code>~/.bash_profile</code> 文件内</p>
 
       
