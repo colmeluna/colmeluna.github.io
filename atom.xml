@@ -678,40 +678,6 @@ _   底线
   </entry>
   
   <entry>
-    <title>tiddlywiki Nginx下的部署</title>
-    <link href="colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/"/>
-    <id>colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/</id>
-    <published>2017-06-07T14:42:03.000Z</published>
-    <updated>2017-06-13T19:25:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>tiddlywiki启动命令</p>
-<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code><br><code>nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;</code></p>
-<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /wiki/ &#123;</span><br><span class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>   MarkdownPhotos/Res/test.jpg</p>
-<p>   $:/config/tiddlyweb/host<br>   $protocol$//$host$/wiki/</p>
-<p>   Use the camera to import photos and the new file will replace the old one</p>
-<ol>
-<li>Load Tiddlywiki on the phone  browser</li>
-<li>Use the import tools  and select file with phone camera and take a photo and save.</li>
-</ol>
-<p>Html5 call the  carmera generated file name is “<strong>image.jpg</strong>“ always.<br>so..this problem will made us to only save the last picture in my wiki repo.  </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;tiddlywiki启动命令&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1&lt;/code&gt;&lt;br&gt;&lt;code&gt;nohup tiddlywi
-    
-    </summary>
-    
-      <category term="开发" scheme="colmeluna.me/categories/programming/"/>
-    
-    
-      <category term="Nginx" scheme="colmeluna.me/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SDLPAL98 仙剑奇侠传98柔情版移植3DS</title>
     <link href="colmeluna.me/2017/06/07/SDLPAL98/"/>
     <id>colmeluna.me/2017/06/07/SDLPAL98/</id>
@@ -758,6 +724,40 @@ _   底线
       <category term="SDL" scheme="colmeluna.me/tags/SDL/"/>
     
       <category term="游戏开发" scheme="colmeluna.me/tags/devGame/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tiddlywiki Nginx下的部署</title>
+    <link href="colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/"/>
+    <id>colmeluna.me/2017/06/07/tiddlywiki_nodejs_nginx_conf/</id>
+    <published>2017-06-07T14:42:03.000Z</published>
+    <updated>2017-06-13T19:25:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>tiddlywiki启动命令</p>
+<p><code>tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1</code><br><code>nohup tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1 &amp;</code></p>
+<p>Nginx设置反向代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /wiki/ &#123;</span><br><span class="line">  <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        Host             <span class="variable">$host</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Real-IP        <span class="variable">$remote_addr</span>;</span><br><span class="line">  <span class="attribute">proxy_set_header</span>        X-Forwarded-For  <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>   MarkdownPhotos/Res/test.jpg</p>
+<p>   $:/config/tiddlyweb/host<br>   $protocol$//$host$/wiki/</p>
+<p>   Use the camera to import photos and the new file will replace the old one</p>
+<ol>
+<li>Load Tiddlywiki on the phone  browser</li>
+<li>Use the import tools  and select file with phone camera and take a photo and save.</li>
+</ol>
+<p>Html5 call the  carmera generated file name is “<strong>image.jpg</strong>“ always.<br>so..this problem will made us to only save the last picture in my wiki repo.  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;tiddlywiki启动命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tiddlywiki --server 8080 $:/core/save/all text/plain text/html zx zx 127.0.0.1&lt;/code&gt;&lt;br&gt;&lt;code&gt;nohup tiddlywi
+    
+    </summary>
+    
+      <category term="开发" scheme="colmeluna.me/categories/programming/"/>
+    
+    
+      <category term="Nginx" scheme="colmeluna.me/tags/Nginx/"/>
     
   </entry>
   
