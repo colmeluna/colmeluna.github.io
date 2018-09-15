@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[wxmap-templatemsg]]></title>
+      <title><![CDATA[微信小程序 模板消息]]></title>
       <url>/2018/09/15/wxmap-templatemsg/</url>
       <content type="html"><![CDATA[<h2 id="小程序模板消息"><a href="#小程序模板消息" class="headerlink" title="小程序模板消息"></a>小程序模板消息</h2><h3 id="下发条件说明："><a href="#下发条件说明：" class="headerlink" title="下发条件说明："></a>下发条件说明：</h3><ol>
 <li>支付<br>当用户在小程序内完成过支付行为，可允许开发者向用户在7天内推送有限条数的模板消息（1次支付可下发3条，多次支付下发条数独立，互相不影响）</li>
