@@ -86,10 +86,6 @@
 				
 					<a class="github" target="_blank" href="https://github.com/colmeluna" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/colmeluna" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zieg" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
 					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 			</div>
@@ -130,10 +126,6 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/colmeluna" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="http://weibo.com/colmeluna" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zieg" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
@@ -186,10 +178,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="小程序模板消息"><a href="#小程序模板消息" class="headerlink" title="小程序模板消息"></a>小程序模板消息</h2><h3 id="什么是模板消息"><a href="#什么是模板消息" class="headerlink" title="什么是模板消息"></a>什么是模板消息</h3><ul>
-<li><p>简单直白的说小程序模板消息就是传统app的推送消息。基于微信的通知渠道。</p>
-</li>
-<li><p>当模板消息到达客户端，也就是微信端，会唤起微信消息提醒，用户点开微信会在微信的“服务通知”内看到消息体。</p>
-</li>
+<li>简单直白的说小程序模板消息就是传统app的推送消息。基于微信的通知渠道。</li>
+<li>当模板消息到达客户端，也就是微信端，会唤起微信消息提醒，用户点开微信会在微信的“服务通知”内看到消息体。</li>
 <li>推送消息的消息体格式受微信官方管控，开发者无法完全自定义，需要套用官方提供的模板，所以称之为模板消息。</li>
 <li>为避免这种消息被服务端过渡营销手段产生的频繁骚扰唤醒，微信官方针对模板消息的发送条件做了约束。约束如下</li>
 </ul>
@@ -213,7 +203,7 @@
 <li>小程序开发工具开发环境内，前端form表单提交所产生的formId值为 “the formId is a mock one”字符串。</li>
 <li>测试消息模板必须使用真机环境，否则formid错误，错误码errer40128 ，Post请求下发失败。</li>
 </ul>
-<h2 id="注意事项（后端）："><a href="#注意事项（后端）：" class="headerlink" title="注意事项（后端）："></a>注意事项（后端）：</h2><ul>
+<h3 id="注意事项（后端）："><a href="#注意事项（后端）：" class="headerlink" title="注意事项（后端）："></a>注意事项（后端）：</h3><ul>
 <li>access_token 2小时限时，超过时限需重新请求accesstoken，否则post下发模板请求错误。</li>
 </ul>
 <p>后台可用模板: 25个/小程序。<br><img src="/2018/09/15/wxmap-templatemsg/wxmaptemplatemsg01.png" title="后台可用模板25个"><br>自定义模板：<br>    可以申请添加新模板。<br>    可以申请模板内的新关键字。<br>    审核通过后可使用。审核周期较长，约3-7天。</p>
@@ -221,8 +211,14 @@
 <p>1、小程序后台新加入一条测试模板：<br>    <img src="/2018/09/15/wxmap-templatemsg/02.png" title="detail"></p>
 <p>2、小程序内新建index.wxml 作为demo页面<br>    form表单 开启模板推送report-submit=true<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">bindsubmit</span>=<span class="string">"formSubmit"</span> <span class="attr">report-submit</span>=<span class="string">'true'</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"btn-area"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">formType</span>=<span class="string">"submit"</span>&gt;</span>发送<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>3、新建index.js 主要写点击事件的POST请求<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">Page</span>(&#123;</span><br><span class="line">  <span class="attribute">data</span>: &#123;</span><br><span class="line">    <span class="attribute">accessToken</span>: <span class="string">"12_3_DTsahtUVtqH5VsefEICJvQUk9pzUT1T"</span>, </span><br><span class="line">    <span class="comment">//这里可以用postman等工具提前get请求一个token后粘贴此处 方便测试</span></span><br><span class="line">    <span class="attribute">formId</span>: <span class="string">""</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attribute">formSubmit</span>: function (e) &#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      <span class="attribute">formId</span>: e.detail.formId</span><br><span class="line">    &#125;)</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attribute">url</span>: <span class="string">'https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token='</span>+this.data.accessToken,</span><br><span class="line">      <span class="attribute">data</span>: &#123;</span><br><span class="line">        <span class="attribute">touser</span>: <span class="string">"o0Svv0HkPpV6JFq5"</span>,<span class="comment">//你的Openid </span></span><br><span class="line">        <span class="attribute">template_id</span>: <span class="string">"PNa4fm2l92fPDXIAwMYP"</span>,<span class="comment">//模板的ID</span></span><br><span class="line">        <span class="attribute">page</span>: <span class="string">"index"</span>,<span class="comment">//消息跳转回小程序页面的url</span></span><br><span class="line">        <span class="attribute">form_id</span>: this.data.formId,<span class="comment">//提交表单的formid</span></span><br><span class="line">        <span class="attribute">data</span>: &#123;</span><br><span class="line">          <span class="attribute">keyword1</span>: &#123;</span><br><span class="line">            <span class="attribute">value</span>: <span class="string">"测试demo"</span></span><br><span class="line">          &#125;,</span><br><span class="line">          <span class="attribute">keyword2</span>: &#123;</span><br><span class="line">            <span class="attribute">value</span>: <span class="string">"这里填的是备注信息可以"</span></span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attribute">emphasis_keyword</span>: <span class="string">"keyword1.DATA"</span> <span class="comment">//字体加粗</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attribute">method</span>: <span class="string">'POST'</span>, </span><br><span class="line">      <span class="attribute">header</span>: &#123;</span><br><span class="line">        <span class="string">"Content-Type"</span>: <span class="string">"application//json"</span></span><br><span class="line">      &#125;, <span class="comment">// 设置请求的 header</span></span><br><span class="line">      <span class="attribute">success</span>: function (res) &#123;</span><br><span class="line">        console.log(<span class="string">"打印输出结果返回值 ："</span> + res.data);</span><br><span class="line">        wx.showToast(&#123;</span><br><span class="line">          <span class="attribute">title</span>: <span class="string">'成功'</span>,</span><br><span class="line">          <span class="attribute">icon</span>: <span class="string">'success'</span>,</span><br><span class="line">          <span class="attribute">duration</span>: <span class="number">2000</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">// success</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attribute">fail</span>: function (res) &#123;</span><br><span class="line">        console.log(res.data);</span><br><span class="line">        <span class="comment">// fail</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>3.1接口调用凭证：access_token</p>
+<p>接口地址：<br><code>https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET</code><br>HTTP请求方式:<br><code>GET</code></p>
+<ul>
+<li><u>使用postman等工具请求测试，填入自己的小程序相关参数即可获得。</u></li>
+</ul>
+<p>正常情况下，微信会返回下述 JSON 数据包给开发者：<br><code>{&quot;access_token&quot;: &quot;ACCESS_TOKEN&quot;, &quot;expires_in&quot;: 7200}</code></p>
 <p>4、小程序开发者工具开启在线调试</p>
-<p>5、真机 扫码小程序 打开表单提交后获取 服务通知。结束。</p>
+<p>5、真机扫描二维码，打开开发版小程序 打开表单提交后获取 服务通知。结束。</p>
 
       
 
@@ -258,100 +254,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/15/wxmap-templatemsg/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-install-nvm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/10/install-nvm/" class="archive-article-date">
-  	<time datetime="2017-06-09T16:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="NVM的简介"><a href="#NVM的简介" class="headerlink" title="NVM的简介"></a>NVM的简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
-<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="noopener">Nvm github看这里</a></p>
-<p>注：windows环境使用nvmw。</p>
-<h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
-<pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
-</code></pre><p>2、或者直接克隆到本地通过</p>
-<pre><code>git clone https://github.com/cnpm/nvm.git
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/06/10/install-nvm/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/programming//" class="article-tag-list-link color3">开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/10/install-nvm/">展开全文 >></a>
         </p>
       
 
@@ -457,6 +359,100 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/10/nginx_letsencrpty/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-install-nvm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/10/install-nvm/">CentOS7 安装nvm</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/10/install-nvm/" class="archive-article-date">
+  	<time datetime="2017-06-09T16:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="NVM的简介"><a href="#NVM的简介" class="headerlink" title="NVM的简介"></a>NVM的简介</h3><p>NVM 用于管理Node.js版本,可在系统环境内切换node.js各个版本。</p>
+<p>   <a href="https://github.com/creationix/nvm.git" target="_blank" rel="noopener">Nvm github看这里</a></p>
+<p>注：windows环境使用nvmw。</p>
+<h3 id="获取nvm源码"><a href="#获取nvm源码" class="headerlink" title="获取nvm源码"></a>获取nvm源码</h3><p>1、直接从 github 找到最新版本通过wget下载到本地</p>
+<pre><code>wget https://github.com/cnpm/nvm/archive/v0.23.0.tar.gz
+</code></pre><p>2、或者直接克隆到本地通过</p>
+<pre><code>git clone https://github.com/cnpm/nvm.git
+</code></pre>
+        
+          <a class="article-more-a" href="/2017/06/10/install-nvm/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/programming//" class="article-tag-list-link color3">开发</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/10/install-nvm/">展开全文 >></a>
         </p>
       
 
@@ -963,6 +959,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
@@ -971,15 +971,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
             
             <div class="clearfix"></div>
